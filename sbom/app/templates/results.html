@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SBOM Analysis Results</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header" style="background: linear-gradient(135deg, #012169 0%, #01194a 100%);">
+            <h1 style="color: #012169;"><i class="fas fa-shield-alt"></i> SBOM Analysis Results</h1>
+        <div class="header-actions">
+          <button class="export-btn" onclick="exportToExcel()">
+            <i class="fas fa-file-excel"></i> Export to Excel
+          </button>
+          <button class="export-btn spdx-btn" onclick="exportToSpdx()" style="background-color: #8e44ad; color: #fff; border-color: #7d3c98;">
+            <i class="fas fa-file-code"></i> Export as SPDX
+          </button>
+          <a href="/" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Upload
+            </a>
+        </div>
+        </header>
+
+        <div class="results-container">
+            <!-- Simple Summary Section -->
+            <div class="summary-section">
+                <div class="summary-card">
+                    <div class="summary-header">
+                        <h2><i class="fas fa-chart-pie"></i> Project Summary</h2>
+                    </div>
+                    <div class="summary-content">
+                        <div class="summary-grid">
+                            <div class="summary-item">
+                                <div class="summary-label">Project Type</div>
+                                <div class="summary-value" id="project-type">-</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-label">Direct Dependencies</div>
+                                <div class="summary-value" id="direct-deps">-</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="summary-label">Total Dependencies</div>
+                                <div class="summary-value" id="total-deps">-</div>
+                            </div>
+                        </div>
+
+              <!-- Direct Dependencies List -->
+              <div class="dependencies-list-section">
+                <h3
+                  class="dependencies-toggle"
+                  onclick="toggleDependencies('direct-dependencies-list', 'direct-deps-icon')"
+                >
+                  <i class="fas fa-chevron-right" id="direct-deps-icon"></i>
+                  Direct Dependencies
+                </h3>
+                <div
+                  id="direct-dependencies-list"
+                  class="dependencies-list collapsed"
+                >
+                  <!-- Search bar for direct dependencies -->
+                  <div class="search-container">
+                    <input type="text" id="direct-dependencies-search" class="dependency-search" placeholder="Search direct dependencies..." oninput="filterDirectDependencies()">
+                    <i class="fas fa-search search-icon"></i>
+                  </div>
+                  <!-- Direct dependencies will be populated here -->
+                </div>
+              </div>
+
+              <!-- Sub-dependencies List -->
+              <div class="dependencies-list-section">
+                <h3
+                  class="dependencies-toggle"
+                  onclick="toggleDependencies('all-dependencies-list', 'all-deps-icon')"
+                >
+                  <i class="fas fa-chevron-right" id="all-deps-icon"></i>
+                  Sub-Dependencies
+                </h3>
+                <div
+                  id="all-dependencies-list"
+                  class="dependencies-list collapsed"
+                >
+                  <!-- Search bar for sub-dependencies -->
+                  <div class="search-container">
+                    <input type="text" id="sub-dependencies-search" class="dependency-search" placeholder="Search sub-dependencies..." oninput="filterSubDependencies()">
+                    <i class="fas fa-search search-icon"></i>
+                  </div>
+                  <!-- Sub-dependencies will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vulnerability Scanning Notice -->
+            <div class="dev-notice instruction-box">
+                <div class="notice-content">
+                    <h3>
+                        <i class="fas fa-shield-virus"></i> Vulnerability Scanning & GitHub Enrichment Active
+                    </h3>
+                    <p>
+                        Real-time vulnerability scanning is now enabled! Packages are
+                        color-coded by risk level:
+                        <span class="risk-critical">Red (High/Critical)</span>,
+                        <span class="risk-medium">Yellow (Medium)</span>,
+                        <span class="risk-low">Green (Low/Safe)</span>. Click any package
+                        to see detailed vulnerability information.
+                    </p>
+                    <p style="margin-top: 10px; font-size: 0.95em; color: #666;">
+                        <i class="fab fa-github"></i> <strong>GitHub Enrichment:</strong> Repository health information 
+                        (popularity, maintenance status, activity) is provided for <strong>direct dependencies only</strong>. 
+                        This helps you assess package quality beyond just security vulnerabilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Package Health Warning -->
+        <div id="package-health-warning" style="display: none;">
+          <div class="dev-notice package-health-warning">
+            <div class="notice-content">
+              <h3 class="expandable-toggle" onclick="toggleSection('package-health-content', 'package-health-icon')">
+                <i id="package-health-icon" class="fas fa-chevron-right"></i> <i class="fas fa-exclamation-triangle"></i> Package Health Issues Detected
+              </h3>
+              <div id="package-health-content" class="expandable-content collapsed">
+                <!-- Package health content will be populated here -->
+              </div>
+            </div>
+                </div>
+            </div>
+
+            <!-- Simple Dependency Graph -->
+            <div class="graph-section">
+                <div class="section">
+                    <!-- Dependency Graph Section Header with Export Button Aligned Right -->
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; gap: 16px; flex-wrap: wrap;">
+                      <h2 style="margin: 0;"><i class="fas fa-project-diagram"></i> Dependency Graph</h2>
+                      <button id="export-graph-btn" class="btn export-graph-btn" style="background: #01194a; min-width: 210px; font-size: 1.25em; padding: 20px 36px; height: 60px; display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-image"></i> Export Graph as PNG
+                      </button>
+                    </div>
+            
+            <!-- Graph Filter Controls -->
+            <div class="graph-filter-controls">
+              <div class="filter-section">
+                <label for="graph-filter" class="filter-label">
+                  <i class="fas fa-filter"></i> Filter Graph:
+                </label>
+                <select id="graph-filter" class="filter-dropdown" onchange="applyGraphFilter()">
+                  <option value="all">All Dependencies</option>
+                  <option value="direct-only">Direct Dependencies Only</option>
+                  <option value="select-direct">Select Direct Dependencies</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Dependency Selection Panel -->
+            <div id="dependency-selection-panel" class="dependency-panel" style="display: none;">
+              <div class="panel-header">
+                <h3><i class="fas fa-layer-group"></i> Dependency Selection</h3>
+                <button class="clear-selection-btn" onclick="clearAllSelections()">
+                  <i class="fas fa-times"></i> Clear All
+                </button>
+              </div>
+              <div class="panel-content">
+                <div class="dependency-lists">
+                  <div class="available-deps">
+                    <h4><i class="fas fa-list"></i> Available Dependencies</h4>
+                    <div class="search-container">
+                      <input type="text" id="dependency-search" class="dependency-search" placeholder="Search dependencies..." oninput="filterAvailableDependencies()">
+                      <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div id="available-dependencies-list" class="deps-list">
+                      <!-- Available dependencies will be populated here -->
+                    </div>
+                  </div>
+                  <div class="selected-deps">
+                    <h4><i class="fas fa-check-circle"></i> Selected Dependencies</h4>
+                    <div class="search-container">
+                      <input type="text" id="selected-dependency-search" class="dependency-search" placeholder="Search selected dependencies..." oninput="filterSelectedDependencies()">
+                      <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div id="selected-dependencies-list" class="deps-list">
+                      <!-- Selected dependencies will be populated here -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="graph-container" style="position: relative">
+                        <div id="dependency-graph" class="dependency-graph"></div>
+                <!-- Graph Controls Toggle Button -->
+                <div class="graph-toggle-button" id="graph-toggle-button" onclick="toggleGraphControls()">
+                    <i class="fas fa-mouse-pointer" id="graph-toggle-icon"></i>
+                    <span id="graph-toggle-text">Zoom & Drag</span>
+                </div>
+                <!-- Graph Controls Info Box -->
+                <div class="graph-info-box" id="graph-controls-box">
+                    <strong>Graph Controls:</strong><br />
+                    <ul style="margin: 8px 0 0 18px; padding: 0; font-size: 0.98em">
+                        <li>Click nodes to see detailed information</li>
+                        <li>Click the toggle button (top-right) to enable zoom and drag</li>
+                        <li>Drag nodes to rearrange them</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+
+    <style>
+      .dependencies-list-section {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #e9ecef;
+      }
+
+      .dependencies-list-section h3 {
+        margin: 0 0 15px 0;
+        color: #2c3e50;
+        font-size: 1.2em;
+      }
+
+      .dependencies-toggle {
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.2s ease;
+      }
+
+      .dependencies-toggle:hover {
+        color: #3498db;
+      }
+
+      .dependencies-toggle i {
+        margin-right: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .dependencies-toggle:hover i {
+        transform: translateX(2px);
+      }
+
+      .dependencies-list {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .dependencies-list.expanded {
+        max-height: none;
+      }
+
+      .dependencies-list.collapsed {
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .dependency-item.hidden {
+        display: none;
+      }
+
+      /* Graph Toggle Button Styles */
+      .graph-toggle-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.97);
+        border: 2px solid #e1e8ed;
+        border-radius: 8px;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 0.9em;
+        font-weight: 500;
+        color: #2c3e50;
+        transition: all 0.2s ease;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .graph-toggle-button:hover {
+        background: rgba(52, 152, 219, 0.2);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      }
+
+      .graph-toggle-button:active {
+        transform: translateY(0);
+      }
+
+      .graph-toggle-button i {
+        font-size: 0.95em;
+      }
+
+      /* Graph Info Box Styles */
+      .graph-info-box {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: rgba(255, 255, 255, 0.95);
+        border: 2px solid #e1e8ed;
+        border-radius: 8px;
+        padding: 12px 16px;
+        font-size: 0.9em;
+        color: #2c3e50;
+        max-width: 280px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 999;
+        backdrop-filter: blur(5px);
+      }
+
+      .graph-info-box strong {
+        color: #34495e;
+        font-weight: 600;
+      }
+
+      .graph-info-box ul {
+        margin: 8px 0 0 18px;
+        padding: 0;
+        font-size: 0.95em;
+        line-height: 1.4;
+      }
+
+      .graph-info-box li {
+        margin-bottom: 4px;
+        color: #555;
+      }
+
+      .dependencies-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .dependency-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 6px;
+        border-left: 4px solid;
+        background: #f8f9fa;
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+
+      .dependency-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background: #e9ecef;
+      }
+
+      .dependency-name {
+        font-weight: bold;
+        color: #2c3e50;
+        min-width: 150px;
+      }
+
+      .dependency-version {
+        color: #6c757d;
+        margin-left: 15px;
+      }
+
+      /* Graph Filter Controls */
+      .graph-filter-controls {
+        margin-bottom: 20px;
+        padding: 20px;
+        background: white;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s ease;
+      }
+
+      .graph-filter-controls:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-color: #d1ecf1;
+      }
+
+      .filter-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .filter-label {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        letter-spacing: 0.5px;
+      }
+
+      .filter-dropdown {
+        padding: 12px 16px;
+        border: 2px solid #e1e8ed;
+        border-radius: 8px;
+        background: white;
+        color: #2c3e50;
+        font-size: 0.95em;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        min-width: 220px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 16px;
+        padding-right: 40px;
+      }
+
+      .filter-dropdown:hover {
+        border-color: #3498db;
+        box-shadow: 0 4px 8px rgba(52, 152, 219, 0.15);
+        transform: translateY(-1px);
+      }
+
+      .filter-dropdown:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+      }
+
+      .filter-dropdown option {
+        padding: 10px 12px;
+        background: white;
+        color: #2c3e50;
+        font-size: 0.9em;
+      }
+
+      .filter-dropdown option:hover {
+        background: #f8f9fa;
+      }
+
+      /* Dependency Selection Panel */
+      .dependency-panel {
+        margin: 20px 0;
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      .panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background: #2c3e50;
+        color: white;
+      }
+      
+      .panel-header h3 {
+        margin: 0;
+        font-size: 1.1em;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .clear-selection-btn {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: background-color 0.2s ease;
+      }
+      
+      .clear-selection-btn:hover {
+        background: #c0392b;
+      }
+      
+      .panel-content {
+        padding: 20px;
+      }
+      
+      .dependency-lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      
+      .available-deps, .selected-deps {
+        background: white;
+        border-radius: 6px;
+        padding: 15px;
+        border: 1px solid #e9ecef;
+      }
+      
+      .available-deps h4, .selected-deps h4 {
+        margin: 0 0 15px 0;
+        color: #2c3e50;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      
+      .deps-list {
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      
+      .dep-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        border-left: 4px solid #6c757d;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      
+      .dep-item:hover {
+        background: #e9ecef;
+        transform: translateX(3px);
+      }
+      
+      .dep-item.selected {
+        background: #d4edda;
+        border-left-color: #28a745;
+      }
+      
+      .dep-item.selected:hover {
+        background: #c3e6cb;
+      }
+      
+      .dep-info {
+        flex: 1;
+      }
+      
+      .dep-name {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 0.95em;
+      }
+      
+      .dep-version {
+        color: #6c757d;
+        font-size: 0.85em;
+        margin-top: 2px;
+      }
+      
+      /* Enhanced clickable item styling */
+      .dep-item {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .dep-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, transparent 0%, rgba(52, 152, 219, 0.05) 50%, transparent 100%);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+      
+      .dep-item:hover::before {
+        transform: translateX(100%);
+      }
+      
+      .dep-item.selected::before {
+        background: linear-gradient(90deg, transparent 0%, rgba(220, 53, 69, 0.05) 50%, transparent 100%);
+      }
+      
+      .no-deps-message {
+        color: #6c757d;
+        font-style: italic;
+        text-align: center;
+        padding: 20px;
+      }
+      
+      /* Search functionality */
+      .search-container {
+        position: relative;
+        margin-bottom: 15px;
+      }
+      
+      .dependency-search {
+        width: 100%;
+        padding: 10px 35px 10px 12px;
+        border: 2px solid #e9ecef;
+        border-radius: 6px;
+        font-size: 0.9em;
+        background: white;
+        transition: border-color 0.2s ease;
+      }
+      
+      .dependency-search:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+      }
+      
+      .dependency-search::placeholder {
+        color: #adb5bd;
+      }
+      
+      .search-icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+        font-size: 0.9em;
+      }
+      
+      .dep-item.hidden {
+        display: none;
+      }
+      
+      .no-results-message {
+        color: #6c757d;
+        font-style: italic;
+        text-align: center;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 6px;
+        margin: 10px 0;
+      }
+
+      .dependency-risk {
+        margin-left: auto;
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.85em;
+      }
+
+      .dependency-vulns {
+        margin-left: 10px;
+        color: #6c757d;
+        font-size: 0.85em;
+      }
+
+      .dependency.risk-critical {
+        border-left: 4px solid #dc3545;
+        background: #fff5f5;
+      }
+
+      .dependency.risk-medium {
+        border-left: 4px solid #f1c40f;
+        background: #fffef0;
+      }
+
+      .dependency.risk-low {
+        border-left: 4px solid #2ecc71;
+        background: #f0fff4;
+      }
+
+      .dependency.risk-safe {
+        border-left: 4px solid #2ecc71;
+        background: #f0fff4;
+      }
+
+      .risk-critical {
+        color: #dc3545;
+        font-weight: bold;
+      }
+
+      .risk-medium {
+        color: #f1c40f;
+        font-weight: bold;
+      }
+
+      .risk-low {
+        color: #2ecc71;
+        font-weight: bold;
+      }
+
+      .risk-safe {
+        color: #2ecc71;
+        font-weight: bold;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .header-actions .btn {
+        margin: 0;
+      }
+
+      /* Header layout */
+      .header {
+        background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        color: white;
+        padding: 30px 40px;
+        text-align: left;
+        position: relative;
+        border-radius: 12px 12px 0 0;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="40%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.05"/><stop offset="100%" stop-color="%23000000" stop-opacity="0.02"/></radialGradient></defs><circle fill="url(%23a)" cx="10" cy="10" r="10"/><circle fill="url(%23a)" cx="30" cy="5" r="8"/><circle fill="url(%23a)" cx="60" cy="15" r="6"/><circle fill="url(%23a)" cx="80" cy="8" r="4"/></svg>');
+        opacity: 0.3;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .header h1 {
+        font-size: 2.2em;
+        margin-bottom: 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 1;
+        font-weight: 300;
+        color: white !important;
+      }
+
+      .header-actions {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Enhanced Excel Export Button - Green */
+      .export-btn {
+        background: #27ae60;
+        color: white;
+        padding: 14px 28px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 160px;
+        justify-content: center;
+        height: 48px;
+      }
+
+      .export-btn i {
+        font-size: 1.2em;
+      }
+
+      .export-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      /* Back to Upload Button - Red */
+      .back-btn {
+        background: #e74c3c;
+        color: white;
+        padding: 14px 28px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1em;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 160px;
+        justify-content: center;
+        height: 48px;
+      }
+
+      .back-btn i {
+        font-size: 1.2em;
+      }
+
+      /* Regular button styling to match index.html */
+      .btn {
+        background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .error-message {
+        text-align: center;
+        padding: 20px;
+        color: #856404;
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 8px;
+      }
+
+      /* Expandable sections */
+      .expandable-toggle {
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.2s ease;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .expandable-toggle:hover {
+        color: #3498db;
+      }
+
+      .expandable-toggle i:first-child {
+        transition: transform 0.3s ease;
+      }
+
+      .expandable-content {
+        margin-top: 10px;
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+
+      .expandable-content.collapsed {
+        max-height: 0;
+        margin-top: 0;
+        opacity: 0;
+      }
+
+      .expandable-content.expanded {
+        max-height: none;
+        opacity: 1;
+      }
+
+      /* Dev notice styling for consistent appearance */
+      .dev-notice {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .dev-notice .notice-content {
+        margin: 0;
+      }
+
+      .dev-notice .expandable-toggle {
+        margin-bottom: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+      }
+
+      /* Skipped dependencies warning styling - make it match dev-notice */
+      .skipped-deps-warning {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .skipped-deps-warning .expandable-toggle {
+        margin-bottom: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        color: #2c3e50;
+      }
+
+      .skipped-deps-warning .expandable-toggle:hover {
+        color: #3498db;
+      }
+    </style>
+
+    <script>
+      // Toggle function for expandable sections
+      function toggleSection(contentId, iconId) {
+        const content = document.getElementById(contentId);
+        const icon = document.getElementById(iconId);
+        
+        if (content.classList.contains('expanded')) {
+          content.classList.remove('expanded');
+          content.classList.add('collapsed');
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-right');
+        } else {
+          content.classList.remove('collapsed');
+          content.classList.add('expanded');
+          icon.classList.remove('fa-chevron-right');
+          icon.classList.add('fa-chevron-down');
+        }
+      }
+
+      // Global variable to track graph interaction state
+      let graphInteractionsEnabled = false; // Start with interactions disabled
+
+      // Toggle graph controls
+      function toggleGraphControls() {
+        graphInteractionsEnabled = !graphInteractionsEnabled;
+        const toggleButton = document.getElementById('graph-toggle-button');
+        const toggleIcon = document.getElementById('graph-toggle-icon');
+        const toggleText = document.getElementById('graph-toggle-text');
+        
+        if (graphInteractionsEnabled) {
+          toggleButton.style.backgroundColor = 'rgba(52, 152, 219, 0.1)';
+          toggleButton.style.borderColor = '#3498db';
+          toggleIcon.classList.remove('fa-mouse-pointer');
+          toggleIcon.classList.add('fa-hand-pointer');
+          toggleText.textContent = 'Disable Zoom & Drag';
+          
+          // Enable graph interactions
+          if (window.currentNetwork) {
+            window.currentNetwork.setOptions({
+              interaction: {
+                hover: true,
+                zoomView: true,
+                dragView: true,
+                selectConnectedEdges: false,
+                keyboard: {
+                  enabled: false
+                }
+              }
+            });
+          }
+        } else {
+          toggleButton.style.backgroundColor = 'rgba(255,255,255,0.97)';
+          toggleButton.style.borderColor = '#e1e8ed';
+          toggleIcon.classList.remove('fa-hand-pointer');
+          toggleIcon.classList.add('fa-mouse-pointer');
+          toggleText.textContent = 'Zoom & Drag';
+          
+          // Disable graph interactions
+          if (window.currentNetwork) {
+            window.currentNetwork.setOptions({
+              interaction: {
+                hover: false,
+                zoomView: false,
+                dragView: false,
+                selectConnectedEdges: false,
+                keyboard: {
+                  enabled: false
+                }
+              }
+            });
+          }
+        }
+      }
+
+      // Fetch scan data from the backend using scan_id
+      fetch("/api/scan_data")
+        .then((response) => response.json())
+        .then((data) => {
+          window.vulnerabilityDataFromServer = data.vulnerabilities || {};
+          window.sbomDataFromServer = data.sbom_data || {};
+          window.projectTypeFromServer = data.project_type || "-";
+          window.filenameFromServer = data.filename || "-";
+          // Show warning if skipped dependencies are present
+          // Remove the div with id="skipped-deps-warning" and any related markup
+          // You may want to trigger graph rendering here as well
+        })
+        .catch((err) => {
+          console.error("Failed to fetch scan data:", err);
+        });
+    </script>
+    <script src="{{ url_for('static', filename='js/results.js') }}"></script>
+</body>
+</html>
