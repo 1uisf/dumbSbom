@@ -1,6 +1,3 @@
-// SVG for GitHub icon
-const githubIconSVG = `<svg aria-hidden="true" height="15" viewBox="0 0 16 16" width="15" style="vertical-align:middle;margin-left:4px;fill:#333;display:inline-block;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>`;
-
 // Results page JavaScript for SBOM Analyzer
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -464,14 +461,11 @@ function renderDependencyGraph(dependencyTree) {
     // Set initial graph controls styling since interactions are disabled by default
     setTimeout(() => {
         const toggleButton = document.getElementById('graph-toggle-button');
-        const toggleIcon = document.getElementById('graph-toggle-icon');
         const toggleText = document.getElementById('graph-toggle-text');
         
-        if (toggleButton && toggleIcon && toggleText) {
+        if (toggleButton && toggleText) {
             toggleButton.style.backgroundColor = 'rgba(255,255,255,0.97)';
             toggleButton.style.borderColor = '#e1e8ed';
-            toggleIcon.classList.remove('fa-hand-pointer');
-            toggleIcon.classList.add('fa-mouse-pointer');
             toggleText.textContent = 'Zoom & Drag';
         }
     }, 100);
@@ -558,18 +552,17 @@ function showBasicNodeDetails(dependency, role) {
         if (github.health) {
             const health = github.health;
             const statusClass = `health-${health.overall_status}`;
-            const statusIcon = health.overall_status === 'excellent' ? 'fas fa-check-circle' :
-                              health.overall_status === 'good' ? 'fas fa-thumbs-up' :
-                              health.overall_status === 'moderate' ? 'fas fa-exclamation-triangle' :
-                              health.overall_status === 'poor' ? 'fas fa-times-circle' :
-                              'fas fa-radiation';
+            const statusIcon = health.overall_status === 'excellent' ? '✔️' :
+                              health.overall_status === 'good' ? '👍' :
+                              health.overall_status === 'moderate' ? '⚠️' :
+                              health.overall_status === 'poor' ? '❌' :
+                              '☢️';
             
             healthSection = `
                 <div class="health-assessment">
-                    <h4><i class="fas fa-heartbeat"></i> Repository Health</h4>
+                    <h4>Repository Health</h4>
                     <div class="health-summary ${statusClass}">
                         <div class="health-status">
-                            <i class="${statusIcon}"></i>
                             <span class="health-label">${health.overall_status.toUpperCase()}</span>
                             <span class="health-score">${health.overall_score}/${health.max_score}</span>
                         </div>
@@ -599,7 +592,7 @@ function showBasicNodeDetails(dependency, role) {
         
         githubSection = `
             <div class="github-section">
-                <h4><i class="fab fa-github"></i> GitHub Repository</h4>
+                <h4>GitHub Repository</h4>
                 <div class="github-info">
                     <div class="detail-row">
                         <strong>Repository:</strong> 
@@ -612,22 +605,22 @@ function showBasicNodeDetails(dependency, role) {
                     ` : ''}
                     <div class="github-stats">
                         <div class="github-stat">
-                            <i class="fas fa-star"></i> ${github.stargazers_count || 0} stars
+                            ${github.stargazers_count || 0} stars
                         </div>
                         <div class="github-stat">
-                            <i class="fas fa-code-branch"></i> ${github.forks_count || 0} forks
+                            ${github.forks_count || 0} forks
                         </div>
                         <div class="github-stat">
-                            <i class="fas fa-exclamation-circle"></i> ${github.open_issues_count || 0} open issues
+                            ${github.open_issues_count || 0} open issues
                         </div>
                         ${github.language ? `
                             <div class="github-stat">
-                                <i class="fas fa-code"></i> ${github.language}
+                                ${github.language}
                             </div>
                         ` : ''}
                         ${github.pushed_at ? `
                             <div class="github-stat">
-                                <i class="fas fa-clock"></i> Last Updated: ${new Date(github.pushed_at).toLocaleDateString()}
+                                Last Updated: ${new Date(github.pushed_at).toLocaleDateString()}
                             </div>
                         ` : ''}
                     </div>
@@ -812,18 +805,17 @@ function showVulnerabilityDetails(dependency, role, vulnData) {
         if (github.health) {
             const health = github.health;
             const statusClass = `health-${health.overall_status}`;
-            const statusIcon = health.overall_status === 'excellent' ? 'fas fa-check-circle' :
-                              health.overall_status === 'good' ? 'fas fa-thumbs-up' :
-                              health.overall_status === 'moderate' ? 'fas fa-exclamation-triangle' :
-                              health.overall_status === 'poor' ? 'fas fa-times-circle' :
-                              'fas fa-radiation';
+            const statusIcon = health.overall_status === 'excellent' ? '✔️' :
+                              health.overall_status === 'good' ? '👍' :
+                              health.overall_status === 'moderate' ? '⚠️' :
+                              health.overall_status === 'poor' ? '❌' :
+                              '☢️';
             
             healthSection = `
                 <div class="health-assessment">
-                    <h4><i class="fas fa-heartbeat"></i> Repository Health</h4>
+                    <h4>Repository Health</h4>
                     <div class="health-summary ${statusClass}">
                         <div class="health-status">
-                            <i class="${statusIcon}"></i>
                             <span class="health-label">${health.overall_status.toUpperCase()}</span>
                             <span class="health-score">${health.overall_score}/${health.max_score}</span>
                         </div>
@@ -852,7 +844,7 @@ function showVulnerabilityDetails(dependency, role, vulnData) {
         
         githubSection = `
             <div class="github-section">
-                <h4><i class="fab fa-github"></i> GitHub Repository</h4>
+                <h4>GitHub Repository</h4>
                 <div class="github-info">
             <div class="detail-row">
                         <strong>Repository:</strong> 
@@ -865,22 +857,22 @@ function showVulnerabilityDetails(dependency, role, vulnData) {
                     ` : ''}
                     <div class="github-stats">
                         <div class="github-stat">
-                            <i class="fas fa-star"></i> ${github.stargazers_count || 0} stars
+                            ${github.stargazers_count || 0} stars
                         </div>
                         <div class="github-stat">
-                            <i class="fas fa-code-branch"></i> ${github.forks_count || 0} forks
+                            ${github.forks_count || 0} forks
                         </div>
                         <div class="github-stat">
-                            <i class="fas fa-exclamation-circle"></i> ${github.open_issues_count || 0} open issues
+                            ${github.open_issues_count || 0} open issues
                         </div>
                         ${github.language ? `
                             <div class="github-stat">
-                                <i class="fas fa-code"></i> ${github.language}
+                                ${github.language}
                             </div>
                         ` : ''}
                         ${github.pushed_at ? `
                             <div class="github-stat">
-                                <i class="fas fa-clock"></i> Last Updated: ${new Date(github.pushed_at).toLocaleDateString()}
+                                Last Updated: ${new Date(github.pushed_at).toLocaleDateString()}
                             </div>
                         ` : ''}
                     </div>
@@ -947,18 +939,17 @@ function showNAPackageDetails(dependency, role, vulnData) {
         if (github.health) {
             const health = github.health;
             const statusClass = `health-${health.overall_status}`;
-            const statusIcon = health.overall_status === 'excellent' ? 'fas fa-check-circle' :
-                              health.overall_status === 'good' ? 'fas fa-thumbs-up' :
-                              health.overall_status === 'moderate' ? 'fas fa-exclamation-triangle' :
-                              health.overall_status === 'poor' ? 'fas fa-times-circle' :
-                              'fas fa-radiation';
+            const statusIcon = health.overall_status === 'excellent' ? '✔️' :
+                              health.overall_status === 'good' ? '👍' :
+                              health.overall_status === 'moderate' ? '⚠️' :
+                              health.overall_status === 'poor' ? '❌' :
+                              '☢️';
             
             healthSection = `
                 <div class="health-assessment">
-                    <h4><i class="fas fa-heartbeat"></i> Repository Health</h4>
+                    <h4>Repository Health</h4>
                     <div class="health-summary ${statusClass}">
                         <div class="health-status">
-                            <i class="${statusIcon}"></i>
                             <span class="health-label">${health.overall_status.toUpperCase()}</span>
                             <span class="health-score">${health.overall_score}/${health.max_score}</span>
                 </div>
@@ -987,7 +978,7 @@ function showNAPackageDetails(dependency, role, vulnData) {
         
         githubSection = `
             <div class="github-section">
-                <h4><i class="fab fa-github"></i> GitHub Repository</h4>
+                <h4>GitHub Repository</h4>
                 <div class="github-info">
                     <div class="detail-row">
                         <strong>Repository:</strong> 
@@ -1000,22 +991,22 @@ function showNAPackageDetails(dependency, role, vulnData) {
                     ` : ''}
                     <div class="github-stats">
                         <div class="github-stat">
-                            <i class="fas fa-star"></i> ${github.stargazers_count || 0} stars
+                            ${github.stargazers_count || 0} stars
                         </div>
                         <div class="github-stat">
-                            <i class="fas fa-code-branch"></i> ${github.forks_count || 0} forks
+                            ${github.forks_count || 0} forks
                         </div>
                         <div class="github-stat">
-                            <i class="fas fa-exclamation-circle"></i> ${github.open_issues_count || 0} open issues
+                            ${github.open_issues_count || 0} open issues
                         </div>
                         ${github.language ? `
                             <div class="github-stat">
-                                <i class="fas fa-code"></i> ${github.language}
+                                ${github.language}
                             </div>
                         ` : ''}
                         ${github.pushed_at ? `
                             <div class="github-stat">
-                                <i class="fas fa-clock"></i> Last Updated: ${new Date(github.pushed_at).toLocaleDateString()}
+                                Last Updated: ${new Date(github.pushed_at).toLocaleDateString()}
                             </div>
                         ` : ''}
                     </div>
@@ -1049,7 +1040,7 @@ function showNAPackageDetails(dependency, role, vulnData) {
                 </div>
             ` : ''}
             <div class="security-section">
-                <h4><i class="fas fa-shield-alt"></i> Security Assessment</h4>
+                <h4>Security Assessment</h4>
                 <div class="risk-summary risk-na">
                     <div class="risk-level">
                         <strong>Status:</strong> <span class="na-status">N/A</span>
@@ -1804,10 +1795,6 @@ function createDependencyItem(dep, isSelected, forceNA, source, isSelectionList)
     const depName = document.createElement('span');
     depName.className = 'dependency-name';
     depName.textContent = dep.name;
-    // Restore GitHub icon for direct dependencies with github info
-    if (source === 'direct' && dep.github) {
-        depName.innerHTML += githubIconSVG;
-    }
     const depVersion = document.createElement('span');
     depVersion.className = 'dependency-version';
     depVersion.textContent = dep.version;
@@ -2351,4 +2338,49 @@ function exportToSpdx() {
             }
         });
     });
+}
+
+// Toggle graph controls
+function toggleGraphControls() {
+  graphInteractionsEnabled = !graphInteractionsEnabled;
+  const toggleButton = document.getElementById('graph-toggle-button');
+  const toggleText = document.getElementById('graph-toggle-text');
+
+  if (graphInteractionsEnabled) {
+    toggleButton.style.backgroundColor = 'rgba(52, 152, 219, 0.1)';
+    toggleButton.style.borderColor = '#3498db';
+    toggleText.textContent = 'Disable Zoom & Drag';
+    // Enable graph interactions
+    if (window.currentNetwork) {
+      window.currentNetwork.setOptions({
+        interaction: {
+          hover: true,
+          zoomView: true,
+          dragView: true,
+          selectConnectedEdges: false,
+          keyboard: {
+            enabled: false
+          }
+        }
+      });
+    }
+  } else {
+    toggleButton.style.backgroundColor = 'rgba(255,255,255,0.97)';
+    toggleButton.style.borderColor = '#e1e8ed';
+    toggleText.textContent = 'Zoom & Drag';
+    // Disable graph interactions
+    if (window.currentNetwork) {
+      window.currentNetwork.setOptions({
+        interaction: {
+          hover: false,
+          zoomView: false,
+          dragView: false,
+          selectConnectedEdges: false,
+          keyboard: {
+            enabled: false
+          }
+        }
+      });
+    }
+  }
 }

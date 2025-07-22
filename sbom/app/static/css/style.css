@@ -417,10 +417,6 @@ header h1 {
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
-.control-btn i {
-    font-size: 12px;
-}
-
 .controls-info {
     font-size: 11px;
     color: #6c757d;
@@ -1446,10 +1442,6 @@ header h1 {
     gap: 8px;
 }
 
-.github-section h4 i {
-    color: #333;
-}
-
 .github-info {
     font-size: 0.9em;
 }
@@ -1469,26 +1461,6 @@ header h1 {
     gap: 5px;
     color: #6c757d;
     font-size: 0.85em;
-}
-
-.github-stat i {
-    color: #333;
-}
-
-.github-stat:first-child i {
-    color: #f1c40f;
-}
-
-.github-stat:nth-child(2) i {
-    color: #012169;
-}
-
-.github-stat:nth-child(3) i {
-    color: #e74c3c;
-}
-
-.github-stat:nth-child(4) i {
-    color: #9b59b6;
 }
 
 .github-info .detail-row {

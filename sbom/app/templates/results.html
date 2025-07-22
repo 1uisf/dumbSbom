@@ -17,16 +17,13 @@
 <body>
     <div class="container">
         <header class="header" style="background: linear-gradient(135deg, #012169 0%, #01194a 100%);">
-            <h1 style="color: #012169;"><i class="fas fa-shield-alt"></i> SBOM Analysis Results</h1>
+            <h1 style="color: #012169;">SBOM Analysis Results</h1>
         <div class="header-actions">
-          <button class="export-btn" onclick="exportToExcel()">
-            <i class="fas fa-file-excel"></i> Export to Excel
+          <button class="export-btn" onclick="exportToExcel()"> Export to Excel
           </button>
-          <button class="export-btn spdx-btn" onclick="exportToSpdx()" style="background-color: #8e44ad; color: #fff; border-color: #7d3c98;">
-            <i class="fas fa-file-code"></i> Export as SPDX
+          <button class="export-btn spdx-btn" onclick="exportToSpdx()" style="background-color: #8e44ad; color: #fff; border-color: #7d3c98;"> Export as SPDX
           </button>
-          <a href="/" class="back-btn">
-                <i class="fas fa-arrow-left"></i> Back to Upload
+          <a href="/" class="back-btn"> Back to Upload
             </a>
         </div>
         </header>
@@ -36,7 +33,7 @@
             <div class="summary-section">
                 <div class="summary-card">
                     <div class="summary-header">
-                        <h2><i class="fas fa-chart-pie"></i> Project Summary</h2>
+                        <h2> Project Summary</h2>
                     </div>
                     <div class="summary-content">
                         <div class="summary-grid">
@@ -60,7 +57,7 @@
                   class="dependencies-toggle"
                   onclick="toggleDependencies('direct-dependencies-list', 'direct-deps-icon')"
                 >
-                  <i class="fas fa-chevron-right" id="direct-deps-icon"></i>
+                  <span id="direct-deps-icon">►</span>
                   Direct Dependencies
                 </h3>
                 <div
@@ -70,7 +67,6 @@
                   <!-- Search bar for direct dependencies -->
                   <div class="search-container">
                     <input type="text" id="direct-dependencies-search" class="dependency-search" placeholder="Search direct dependencies..." oninput="filterDirectDependencies()">
-                    <i class="fas fa-search search-icon"></i>
                   </div>
                   <!-- Direct dependencies will be populated here -->
                 </div>
@@ -82,7 +78,7 @@
                   class="dependencies-toggle"
                   onclick="toggleDependencies('all-dependencies-list', 'all-deps-icon')"
                 >
-                  <i class="fas fa-chevron-right" id="all-deps-icon"></i>
+                  <span id="all-deps-icon">►</span>
                   Sub-Dependencies
                 </h3>
                 <div
@@ -92,7 +88,6 @@
                   <!-- Search bar for sub-dependencies -->
                   <div class="search-container">
                     <input type="text" id="sub-dependencies-search" class="dependency-search" placeholder="Search sub-dependencies..." oninput="filterSubDependencies()">
-                    <i class="fas fa-search search-icon"></i>
                   </div>
                   <!-- Sub-dependencies will be populated here -->
                             </div>
@@ -105,7 +100,7 @@
             <div class="dev-notice instruction-box">
                 <div class="notice-content">
                     <h3>
-                        <i class="fas fa-shield-virus"></i> Vulnerability Scanning & GitHub Enrichment Active
+                       Vulnerability Scanning & GitHub Enrichment Active
                     </h3>
                     <p>
                         Real-time vulnerability scanning is now enabled! Packages are
@@ -116,7 +111,7 @@
                         to see detailed vulnerability information.
                     </p>
                     <p style="margin-top: 10px; font-size: 0.95em; color: #666;">
-                        <i class="fab fa-github"></i> <strong>GitHub Enrichment:</strong> Repository health information 
+                        <strong>GitHub Enrichment:</strong> Repository health information 
                         (popularity, maintenance status, activity) is provided for <strong>direct dependencies only</strong>. 
                         This helps you assess package quality beyond just security vulnerabilities.
                     </p>
@@ -129,7 +124,7 @@
           <div class="dev-notice package-health-warning">
             <div class="notice-content">
               <h3 class="expandable-toggle" onclick="toggleSection('package-health-content', 'package-health-icon')">
-                <i id="package-health-icon" class="fas fa-chevron-right"></i> <i class="fas fa-exclamation-triangle"></i> Package Health Issues Detected
+                <span id="package-health-icon">►</span> Package Health Issues Detected
               </h3>
               <div id="package-health-content" class="expandable-content collapsed">
                 <!-- Package health content will be populated here -->
@@ -143,9 +138,9 @@
                 <div class="section">
                     <!-- Dependency Graph Section Header with Export Button Aligned Right -->
                     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; gap: 16px; flex-wrap: wrap;">
-                      <h2 style="margin: 0;"><i class="fas fa-project-diagram"></i> Dependency Graph</h2>
+                      <h2 style="margin: 0;"> Dependency Graph</h2>
                       <button id="export-graph-btn" class="btn export-graph-btn" style="background: #01194a; min-width: 210px; font-size: 1.25em; padding: 20px 36px; height: 60px; display: flex; align-items: center; gap: 12px;">
-                        <i class="fas fa-image"></i> Export Graph as PNG
+                        Export Graph as PNG
                       </button>
                     </div>
             
@@ -153,7 +148,7 @@
             <div class="graph-filter-controls">
               <div class="filter-section">
                 <label for="graph-filter" class="filter-label">
-                  <i class="fas fa-filter"></i> Filter Graph:
+                  Filter Graph:
                 </label>
                 <select id="graph-filter" class="filter-dropdown" onchange="applyGraphFilter()">
                   <option value="all">All Dependencies</option>
@@ -166,28 +161,26 @@
             <!-- Dependency Selection Panel -->
             <div id="dependency-selection-panel" class="dependency-panel" style="display: none;">
               <div class="panel-header">
-                <h3><i class="fas fa-layer-group"></i> Dependency Selection</h3>
+                <h3> Dependency Selection</h3>
                 <button class="clear-selection-btn" onclick="clearAllSelections()">
-                  <i class="fas fa-times"></i> Clear All
+                  Clear All
                 </button>
               </div>
               <div class="panel-content">
                 <div class="dependency-lists">
                   <div class="available-deps">
-                    <h4><i class="fas fa-list"></i> Available Dependencies</h4>
+                    <h4>Available Dependencies</h4>
                     <div class="search-container">
                       <input type="text" id="dependency-search" class="dependency-search" placeholder="Search dependencies..." oninput="filterAvailableDependencies()">
-                      <i class="fas fa-search search-icon"></i>
                     </div>
                     <div id="available-dependencies-list" class="deps-list">
                       <!-- Available dependencies will be populated here -->
                     </div>
                   </div>
                   <div class="selected-deps">
-                    <h4><i class="fas fa-check-circle"></i> Selected Dependencies</h4>
+                    <h4>Selected Dependencies</h4>
                     <div class="search-container">
                       <input type="text" id="selected-dependency-search" class="dependency-search" placeholder="Search selected dependencies..." oninput="filterSelectedDependencies()">
-                      <i class="fas fa-search search-icon"></i>
                     </div>
                     <div id="selected-dependencies-list" class="deps-list">
                       <!-- Selected dependencies will be populated here -->
@@ -201,7 +194,6 @@
                         <div id="dependency-graph" class="dependency-graph"></div>
                 <!-- Graph Controls Toggle Button -->
                 <div class="graph-toggle-button" id="graph-toggle-button" onclick="toggleGraphControls()">
-                    <i class="fas fa-mouse-pointer" id="graph-toggle-icon"></i>
                     <span id="graph-toggle-text">Zoom & Drag</span>
                 </div>
                 <!-- Graph Controls Info Box -->

@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, jsonify, session, send_file
 import os
 from werkzeug.utils import secure_filename
-from app.utils.sbom_analyzer import generate_sbom_from_file, SBOMAnalyzer
+from app.utils.sbom_analyzer import load_dummy_sbom
 from app.utils.vulnerability_database import VulnerabilityDatabase
 import uuid
 from openpyxl import Workbook
@@ -72,139 +72,39 @@ def upload_file():
         return jsonify({'error': 'No selected file'}), 400
     if file and allowed_file(file.filename):
         try:
-            print(f"DEBUG: Original filename: {file.filename}")
             filename = secure_filename(str(file.filename))
-            print(f"DEBUG: Secure filename: {filename}")
-            print(f"DEBUG: Project type detected: {detect_project_type(filename)}")
             filepath = os.path.join(UPLOAD_FOLDER, filename)
             os.makedirs(UPLOAD_FOLDER, exist_ok=True)
             file.save(filepath)
-            
-            # Detect project type and generate SBOM with default settings
-            # max_depth=1: Only immediate sub-dependencies (no tertiary dependencies)
-            # max_depth=2: Would include tertiary dependencies (dependencies of dependencies)
-            project_type = detect_project_type(filename)
-            sbom_data = generate_sbom_from_file(filepath, project_type, max_depth=1, max_packages_per_level=20)
-            
-            # Scan for vulnerabilities and enrich with GitHub data (with error handling)
-            try:
-                analyzer = SBOMAnalyzer()
-                vulnerability_data, skipped_dependencies = analyzer.scan_vulnerabilities(sbom_data['dependency_tree'])
-                
-                # Enrich dependencies with GitHub data
-                enriched_dependencies = analyzer.enrich_with_github_data(sbom_data['dependencies'])
-                sbom_data['dependencies'] = enriched_dependencies
-                
-                # Also enrich the dependency tree
-                enriched_dependency_tree = analyzer.enrich_with_github_data(sbom_data['dependency_tree'])
-                sbom_data['dependency_tree'] = enriched_dependency_tree
-                
-                # Check for abandoned/deprecated packages
-                issues = analyzer.check_package_health(sbom_data['dependencies'])
-                package_health_data = {
-                    'total_issues': len(issues),
-                    'issues': issues,
-                    'summary': 'Health check complete' if issues else 'No health issues detected'
-                }
-            except Exception as e:
-                print(f"Vulnerability scanning or GitHub enrichment failed: {e}")
-                vulnerability_data = {}
-                skipped_dependencies = []
-                package_health_data = {'total_issues': 0, 'issues': [], 'summary': 'Health check failed'}
-            
-            # Convert vulnerability data to JSON-serializable format
-            serializable_vulnerability_data = {}
-            for package_name, package_risk in vulnerability_data.items():
-                # Skip packages that should be marked as N/A (they're in skipped_dependencies)
-                if package_name in skipped_dependencies:
-                    continue
-                    
-                vuln_list = [];
-                for vuln in package_risk.vulnerabilities:
-                    vuln_dict = {
-                        'id': vuln.id,
-                        'title': vuln.title,
-                        'description': vuln.description,
-                        'severity': vuln.severity.value,  # Convert enum to string
-                        'cve_id': vuln.cve_id,
-                        'cvss_score': vuln.cvss_score,
-                        'references': vuln.references or [],
-                        'recommendation': vuln.recommendation
-                    }
-                    vuln_list.append(vuln_dict)
-                serializable_vulnerability_data[package_name] = {
-                    'package_name': package_risk.package_name,
-                    'version': package_risk.version,
-                    'risk_score': package_risk.risk_score,
-                    'risk_level': str(package_risk.risk_level),  # Ensure it's a string
-                    'vulnerability_count': package_risk.vulnerability_count,
-                    'vulnerabilities': vuln_list,
-                    'recommendation': package_risk.recommendation
-                }
-            
-            # Add skipped dependencies with N/A status
-            for skipped_package in skipped_dependencies:
-                serializable_vulnerability_data[skipped_package] = {
-                    'package_name': skipped_package,
-                    'version': 'unknown',
-                    'risk_score': 0,
-                    'risk_level': 'na',  # Special status for N/A
-                    'vulnerability_count': 0,
-                    'vulnerabilities': [],
-                    'recommendation': 'Cannot scan vulnerabilities without specific version number'
-                }
-            
-            # Add N/A packages to skipped_dependencies for transparency
-            for pkg, data in serializable_vulnerability_data.items():
-                if data.get('risk_level') == 'na' and pkg not in skipped_dependencies:
-                    skipped_dependencies.append(pkg)
-            
 
-            
-            # Generate a unique scan_id
+            project_type = detect_project_type(filename)
+            sbom_data = load_dummy_sbom(filepath)
+
+            # Use dummy data directly
             scan_id = str(uuid.uuid4())
-            
-            # Save scan results to the database (including intelligence report)
             db = VulnerabilityDatabase()
-            
-            # Store scan data
-            extended_scan_data = {
-                'dependencies': sbom_data.get('dependencies', []),
-                'subdependencies': sbom_data.get('dependency_tree', []),
-                'vulnerabilities': serializable_vulnerability_data,
-                'skipped_dependencies': skipped_dependencies
-            }
-            
             db.save_scan_result(
                 scan_id=scan_id,
                 dependencies=sbom_data.get('dependencies', []),
                 subdependencies=sbom_data.get('dependency_tree', []),
-                vulnerabilities=serializable_vulnerability_data,
-                skipped_dependencies=skipped_dependencies,
+                vulnerabilities=sbom_data.get('vulnerabilities', {}),
+                skipped_dependencies=sbom_data.get('skipped_dependencies', []),
                 user_id=None,
                 filename=filename,
-                package_health_data=package_health_data
+                package_health_data=sbom_data.get('package_health_issues', {})
             )
-            
-            # Store only minimal data in session to avoid cookie size issues
+
             session['scan_id'] = scan_id
             session['project_type'] = project_type
             session['filename'] = filename
-            
-            # Save GitHub enrichment data to database
-            for dep in sbom_data.get('dependencies', []):
-                if dep.get('github'):
-                    db.save_github_enrichment(scan_id, dep['name'], dep['github'])
-            
-            # Store package health data in session (it's small enough)
-            session['package_health_data'] = package_health_data
-            
+            session['package_health_data'] = sbom_data.get('package_health_issues', {})
+
             return jsonify({
                 'message': 'SBOM generated successfully',
                 'project_type': project_type,
                 'filename': filename,
                 'scan_id': scan_id,
-                'skipped_dependencies': skipped_dependencies,
+                'skipped_dependencies': sbom_data.get('skipped_dependencies', []),
                 'redirect_url': '/results'
             })
         except Exception as e:
@@ -311,19 +211,6 @@ def get_scan_data():
     project_type = project_type if isinstance(project_type, str) else 'Unknown'
     filename = filename if isinstance(filename, str) else '-'
     skipped_dependencies = scan_result.get('skipped_dependencies', [])
-    
-    # Get GitHub enrichment data from database
-    github_enrichment = db.get_all_github_enrichment(scan_id)
-    
-    # Add GitHub data to dependencies
-    for dep in dependencies:
-        if dep.get('name') in github_enrichment:
-            dep['github'] = github_enrichment[dep['name']]
-        else:
-            # Check if we have cached GitHub data for this package
-            cached_github_data = db.get_cached_github_data(dep['name'])
-            if cached_github_data:
-                dep['github'] = cached_github_data
     
     # Debug output for troubleshooting
     # print('=== /api/scan_data DEBUG ===')
@@ -642,93 +529,6 @@ def export_excel():
     except Exception as e:
         print(f"Error exporting Excel: {e}")
         return jsonify({'error': f'Failed to export Excel: {str(e)}'}), 500 
-
-"""
-Vulnerability Intelligence Engine
-Uses ML/NLP to analyze vulnerability patterns and provide security insights
-"""
-
-import re
-import json
-from collections import defaultdict, Counter
-from typing import Dict, List, Tuple, Any
-from dataclasses import dataclass
-import math
-
-
-
-
-@main.route('/api/github_token', methods=['POST'])
-def update_github_token():
-    """Update GitHub API token from frontend"""
-    try:
-        data = request.get_json()
-        token = data.get('token', '').strip()
-        
-        if not token:
-            return jsonify({'error': 'No token provided'}), 400
-        
-        # Test the token with GitHub API
-        import requests
-        headers = {
-            'Authorization': f'token {token}',
-            'Accept': 'application/vnd.github.v3+json'
-        }
-        
-        response = requests.get('https://api.github.com/user', headers=headers, timeout=10)
-        
-        if response.status_code == 200:
-            user_data = response.json()
-            # Store token in session (for this session only)
-            session['github_token'] = token
-            session['github_user'] = user_data.get('login', 'Unknown')
-            
-            return jsonify({
-                'success': True,
-                'message': f'Token validated for user: {user_data.get("login", "Unknown")}',
-                'user': user_data.get('login', 'Unknown')
-            })
-        elif response.status_code == 401:
-            return jsonify({
-                'success': False,
-                'error': 'Invalid token. Please check your token and try again.'
-            }), 401
-        else:
-            return jsonify({
-                'success': False,
-                'error': f'GitHub API error: {response.status_code}'
-            }), 400
-            
-    except Exception as e:
-        return jsonify({
-            'success': False,
-            'error': f'Error validating token: {str(e)}'
-        }), 500
-
-@main.route('/api/github_token/status')
-def get_github_token_status():
-    """Get current GitHub token status"""
-    token = session.get('github_token')
-    user = session.get('github_user')
-    
-    if token and user:
-        return jsonify({
-            'has_token': True,
-            'user': user,
-            'message': f'Token active for user: {user}'
-        })
-    else:
-        return jsonify({
-            'has_token': False,
-            'message': 'No GitHub token configured'
-        })
-
-@main.route('/api/github_token/clear', methods=['POST'])
-def clear_github_token():
-    """Clear GitHub token from session"""
-    session.pop('github_token', None)
-    session.pop('github_user', None)
-    return jsonify({'success': True, 'message': 'GitHub token cleared'}) 
 
 @main.route('/export_spdx', methods=['POST'])
 def export_spdx():

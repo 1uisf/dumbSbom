@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SBOM Generator & Analyzer</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
     <style>
       * {
         margin: 0;
@@ -284,37 +280,19 @@
     <div class="container">
       <div class="header">
         <h1>
-          <i class="fas fa-shield-alt"></i> SBOM Generator & Security Analyzer
+          SBOM Generator & Security Analyzer
         </h1>
         <p>
           Transform your dependency files into comprehensive security reports
         </p>
-        <button class="btn" id="github-token-btn" style="margin-top: 18px; font-size: 1em; background: #111; color: #fff; border: none;">
-          <i class="fab fa-github"></i> Enter GitHub API Token
-        </button>
-      </div>
-
-      <!-- GitHub Token Modal -->
-      <div id="github-token-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(44,62,80,0.25); z-index:1000; align-items:center; justify-content:center;">
-        <div style="background:white; border-radius:12px; max-width:400px; width:90vw; margin:60px auto; padding:32px 28px 24px 28px; box-shadow:0 8px 32px rgba(44,62,80,0.18); position:relative;">
-          <button onclick="closeGithubTokenModal()" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5em; color:#888; cursor:pointer;">&times;</button>
-          <h2 style="margin-bottom:10px; color:#154360; font-size:1.3em;"><i class="fab fa-github"></i> GitHub API Token</h2>
-          <p style="font-size:0.98em; color:#34495e; margin-bottom:12px;">To enable advanced GitHub repository analysis, enter your <b>GitHub Personal Access Token</b> below.<br>
-            <a href="https://github.com/settings/tokens" target="_blank" style="color:#2980b9; text-decoration:underline;">Get your token here</a> (select <b>Generate new token (classic)</b> and choose <b>public_repo</b> scope).</p>
-          <form id="github-token-form" onsubmit="saveGithubToken(event)">
-            <input type="password" id="github-token-input" placeholder="Paste your token here" style="width:100%; padding:10px; border-radius:6px; border:1.5px solid #012169; font-size:1em; margin-bottom:16px;" required>
-            <button type="submit" class="btn" style="width:100%; font-size:1em;">Save Token</button>
-          </form>
-          <div id="github-token-status" style="margin-top:10px; font-size:0.97em;"></div>
-        </div>
       </div>
 
       <div class="content">
         <div class="file-types">
-          <h3><i class="fas fa-file-code"></i> Supported Project Files</h3>
+          <h3>Supported Project Files</h3>
           <div class="supported-files">
             <div class="file-category">
-              <strong><i class="fab fa-python"></i> Python</strong>
+              <strong> Python</strong>
               requirements.txt, pyproject.toml, Pipfile
             </div>
           </div>
@@ -322,7 +300,7 @@
 
         <!-- Estimated Analysis Time Info Box -->
         <div style="margin: 28px 0 0 0; padding: 14px 38px; background: linear-gradient(90deg, #e3f0fc 0%, #f8fbff 100%); border: 1.5px solid #b8daff; border-radius: 10px; box-shadow: 0 2px 12px rgba(1, 33, 105, 0.07); color: #154360; font-size: 1.08em; width: 100%; display: flex; align-items: center; gap: 32px;">
-          <div style="font-size: 2.2em; color: #012169; flex-shrink: 0;"><i class="fas fa-hourglass-half"></i></div>
+          <div style="font-size: 2.2em; color: #012169; flex-shrink: 0;"></div>
           <div style="flex:1;">
             <strong style="font-size: 1.13em; color: #21618c;">Estimated Analysis Time</strong>
             <div style="display: flex; gap: 48px; margin-top: 8px;">
@@ -355,7 +333,6 @@
                 style="display: none"
               />
               <div class="upload-icon">
-                <i class="fas fa-cloud-upload-alt"></i>
               </div>
               <div class="upload-text">
                 Click to select your dependency file
@@ -364,7 +341,7 @@
             </div>
             <br />
             <button type="submit" class="btn">
-              <i class="fas fa-magic"></i> Generate SBOM & Analyze
+              Generate SBOM & Analyze
             </button>
           </form>
         </div>
@@ -469,8 +446,7 @@
           document.querySelector(".upload-subtext").textContent = `${(
             file.size / 1024
           ).toFixed(1)} KB - Ready to generate SBOM`;
-          document.querySelector(".upload-icon").innerHTML =
-            '<i class="fas fa-file-check"></i>';
+          document.querySelector(".upload-icon").innerHTML = '';
         }
       }
 
@@ -530,13 +506,12 @@
               "success",
               `
                         <div style="display: flex; align-items: center; gap: 15px;">
-                            <i class="fas fa-check-circle" style="font-size: 2em; color: #28a745;"></i>
                             <div>
                                 <h3 style="margin: 0 0 10px 0;">✅ SBOM Generated Successfully!</h3>
                                 <p style="margin: 5px 0;"><strong>Project Type:</strong> ${data.project_type}</p>
                                   <!-- Dependency count is now shown on the results page only -->
                                 <button class="btn" onclick="window.location.href='/results'" style="margin-top: 15px;">
-                                    <i class="fas fa-chart-line"></i> View Detailed Analysis
+                                  View Detailed Analysis
                                 </button>
                             </div>
                         </div>
@@ -706,92 +681,6 @@
 
         // Load recent scans on page load
         loadRecentScans();
-      });
-
-      // Modal logic
-      const githubTokenBtn = document.getElementById('github-token-btn');
-      const githubTokenModal = document.getElementById('github-token-modal');
-      const githubTokenInput = document.getElementById('github-token-input');
-      const githubTokenStatus = document.getElementById('github-token-status');
-
-      function openGithubTokenModal() {
-        githubTokenModal.style.display = 'flex';
-        githubTokenInput.value = ''; // Clear for security
-        githubTokenStatus.textContent = '';
-      }
-      function closeGithubTokenModal() {
-        githubTokenModal.style.display = 'none';
-        githubTokenInput.value = ''; // Clear for security
-      }
-      githubTokenBtn.onclick = openGithubTokenModal;
-
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeGithubTokenModal();
-      });
-
-      githubTokenModal.addEventListener('click', function(e) {
-        if (e.target === githubTokenModal) closeGithubTokenModal();
-      });
-
-      function saveGithubToken(e) {
-        e.preventDefault();
-        const token = githubTokenInput.value.trim();
-        if (token.length < 20) {
-          githubTokenStatus.textContent = 'Token seems too short.';
-          githubTokenStatus.style.color = '#dc3545';
-          return;
-        }
-        
-        // Send token to backend for validation
-        fetch('/api/github_token', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ token: token })
-        })
-        .then(response => response.json())
-        .then(data => {
-          if (data.success) {
-            githubTokenStatus.textContent = data.message;
-            githubTokenStatus.style.color = '#27ae60';
-            localStorage.setItem('github_api_token', token);
-            githubTokenInput.value = ''; // Clear the input for security
-            updateTokenButtonStatus(); // Update button text
-            setTimeout(closeGithubTokenModal, 1500);
-          } else {
-            githubTokenStatus.textContent = data.error || 'Token validation failed.';
-            githubTokenStatus.style.color = '#dc3545';
-          }
-        })
-        .catch(error => {
-          githubTokenStatus.textContent = 'Network error. Please try again.';
-          githubTokenStatus.style.color = '#dc3545';
-          console.error('Error:', error);
-        });
-      }
-
-      function updateTokenButtonStatus() {
-        fetch('/api/github_token/status')
-          .then(response => response.json())
-          .then(data => {
-            const btn = document.getElementById('github-token-btn');
-            if (data.has_token) {
-              btn.innerHTML = '<i class="fab fa-github"></i> GitHub Token Active ✓';
-              btn.style.background = '#27ae60';
-            } else {
-              btn.innerHTML = '<i class="fab fa-github"></i> Enter GitHub API Token';
-              btn.style.background = '#111';
-            }
-          })
-          .catch(error => {
-            console.error('Error checking token status:', error);
-          });
-      }
-
-      // Check token status on page load
-      document.addEventListener('DOMContentLoaded', function() {
-        updateTokenButtonStatus();
       });
     </script>
   </body>
