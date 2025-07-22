@@ -1,0 +1,1812 @@
+{
+  "dependencies": [
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:15:15",
+        "closed_issues_count": 0,
+        "description": "The Python micro framework for building web applications.",
+        "forks_count": 16506,
+        "full_name": "pallets/flask",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 35,
+              "score": 3,
+              "status": "active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 16506,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 35,
+              "issue_ratio": 1.0,
+              "open_issues": 14,
+              "raw_score": 0.452,
+              "recency_score": 0.904,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 16506,
+              "raw_score": 30.11,
+              "score": 4,
+              "stars": 69975,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 14,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/pallets/flask",
+        "language": "Python",
+        "open_issues_count": 14,
+        "platform": "github",
+        "pushed_at": "2025-06-12T20:48:14Z",
+        "stargazers_count": 69975
+      },
+      "name": "Flask",
+      "type": "python",
+      "version": "2.0.0"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:15:15",
+        "closed_issues_count": 0,
+        "description": "The comprehensive WSGI web application library.",
+        "forks_count": 1738,
+        "full_name": "pallets/werkzeug",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 22,
+              "score": 4,
+              "status": "very_active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 1738,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 22,
+              "issue_ratio": 1.0,
+              "open_issues": 18,
+              "raw_score": 0.47,
+              "recency_score": 0.94,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 1738,
+              "raw_score": 23.49,
+              "score": 4,
+              "stars": 6759,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 15,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/pallets/werkzeug",
+        "language": "Python",
+        "open_issues_count": 18,
+        "platform": "github",
+        "pushed_at": "2025-06-25T20:29:20Z",
+        "stargazers_count": 6759
+      },
+      "name": "Werkzeug",
+      "type": "python",
+      "version": "2.0.0"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:15:15",
+        "closed_issues_count": 0,
+        "description": "A simple, yet elegant, HTTP library.",
+        "forks_count": 9501,
+        "full_name": "psf/requests",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 31,
+              "score": 3,
+              "status": "active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 9501,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 31,
+              "issue_ratio": 1.0,
+              "open_issues": 269,
+              "raw_score": 0.458,
+              "recency_score": 0.915,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 9501,
+              "raw_score": 28.91,
+              "score": 4,
+              "stars": 53049,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 14,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/psf/requests",
+        "language": "Python",
+        "open_issues_count": 269,
+        "platform": "github",
+        "pushed_at": "2025-06-16T19:10:38Z",
+        "stargazers_count": 53049
+      },
+      "name": "requests",
+      "type": "python",
+      "version": "2.25.0"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:15:15",
+        "closed_issues_count": 0,
+        "description": "Core utilities for Python packages",
+        "forks_count": 267,
+        "full_name": "pypa/packaging",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 14,
+              "score": 4,
+              "status": "very_active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 267,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 14,
+              "issue_ratio": 1.0,
+              "open_issues": 113,
+              "raw_score": 0.481,
+              "recency_score": 0.962,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 267,
+              "raw_score": 17.44,
+              "score": 4,
+              "stars": 664,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 15,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/pypa/packaging",
+        "language": "Python",
+        "open_issues_count": 113,
+        "platform": "github",
+        "pushed_at": "2025-07-03T21:02:02Z",
+        "stargazers_count": 664
+      },
+      "name": "packaging",
+      "type": "python",
+      "version": "21.0"
+    },
+    {
+      "github": {
+        "closed_issues_count": 0,
+        "description": "Repository hosted on Gitlab",
+        "forks_count": 0,
+        "full_name": "openpyxl/openpyxl",
+        "health": {
+          "max_score": 12,
+          "metrics": {
+            "activity": {
+              "score": 0,
+              "status": "unknown"
+            },
+            "community": {
+              "score": 0,
+              "status": "unknown"
+            },
+            "maintenance": {
+              "score": 0,
+              "status": "unknown"
+            },
+            "popularity": {
+              "score": 0,
+              "status": "unknown"
+            }
+          },
+          "overall_score": 0,
+          "overall_status": "unknown",
+          "recommendation": "Repository hosted on Gitlab - metrics not available"
+        },
+        "html_url": "https://foss.heptapod.net/openpyxl/openpyxl",
+        "language": "Unknown",
+        "open_issues_count": 0,
+        "platform": "gitlab",
+        "pushed_at": null,
+        "stargazers_count": 0
+      },
+      "name": "openpyxl",
+      "type": "python",
+      "version": "3.0.0"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:15:15",
+        "closed_issues_count": 0,
+        "description": "Reads key-value pairs from a .env file and can set them as environment variables. It helps in developing applications following the 12-factor principles.",
+        "forks_count": 465,
+        "full_name": "theskumar/python-dotenv",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 23,
+              "score": 4,
+              "status": "very_active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 465,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 23,
+              "issue_ratio": 1.0,
+              "open_issues": 60,
+              "raw_score": 0.468,
+              "recency_score": 0.937,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 465,
+              "raw_score": 21.87,
+              "score": 4,
+              "stars": 8251,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 15,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/theskumar/python-dotenv",
+        "language": "Python",
+        "open_issues_count": 60,
+        "platform": "github",
+        "pushed_at": "2025-06-24T10:26:02Z",
+        "stargazers_count": 8251
+      },
+      "name": "python-dotenv",
+      "type": "python",
+      "version": "0.19.0"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:15:15",
+        "closed_issues_count": 0,
+        "description": "Python lib for TOML",
+        "forks_count": 192,
+        "full_name": "uiri/toml",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 386,
+              "score": 1,
+              "status": "abandoned",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 192,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 386,
+              "issue_ratio": 1.0,
+              "open_issues": 134,
+              "raw_score": 0.0,
+              "recency_score": 0,
+              "score": 1,
+              "status": "poorly_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 192,
+              "raw_score": 17.73,
+              "score": 4,
+              "stars": 1127,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 10,
+          "overall_status": "good",
+          "recommendation": "Good choice - generally well-maintained"
+        },
+        "html_url": "https://github.com/uiri/toml",
+        "language": "Python",
+        "open_issues_count": 134,
+        "platform": "github",
+        "pushed_at": "2024-06-26T18:59:56Z",
+        "stargazers_count": 1127
+      },
+      "name": "toml",
+      "type": "python",
+      "version": "0.10.0"
+    }
+  ],
+  "dependency_tree": [
+    {
+      "name": "Flask",
+      "subdependencies": [
+        {
+          "name": "blinker",
+          "subdependencies": [],
+          "type": "python",
+          "version": "1.9.0"
+        },
+        {
+          "name": "click",
+          "subdependencies": [],
+          "type": "python",
+          "version": "8.1.3"
+        },
+        {
+          "name": "importlib-metadata",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "itsdangerous",
+          "subdependencies": [],
+          "type": "python",
+          "version": "2.2.0"
+        },
+        {
+          "name": "jinja2",
+          "subdependencies": [],
+          "type": "python",
+          "version": "3.1.2"
+        },
+        {
+          "name": "markupsafe",
+          "subdependencies": [],
+          "type": "python",
+          "version": "2.1.1"
+        }
+      ],
+      "type": "python",
+      "version": "2.0.0"
+    },
+    {
+      "name": "Werkzeug",
+      "subdependencies": [
+        {
+          "name": "MarkupSafe",
+          "subdependencies": [],
+          "type": "python",
+          "version": "2.1.1"
+        }
+      ],
+      "type": "python",
+      "version": "2.0.0"
+    },
+    {
+      "name": "requests",
+      "subdependencies": [
+        {
+          "name": "charset_normalizer",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "idna",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "urllib3",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "certifi",
+          "subdependencies": [],
+          "type": "python",
+          "version": "2017.4.17"
+        }
+      ],
+      "type": "python",
+      "version": "2.25.0"
+    },
+    {
+      "name": "packaging",
+      "subdependencies": [],
+      "type": "python",
+      "version": "21.0"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-22 03:27:46",
+        "closed_issues_count": 0,
+        "description": "Repository hosted on Gitlab",
+        "forks_count": 0,
+        "full_name": "openpyxl/openpyxl",
+        "health": {
+          "max_score": 12,
+          "metrics": {
+            "activity": {
+              "score": 0,
+              "status": "unknown"
+            },
+            "community": {
+              "score": 0,
+              "status": "unknown"
+            },
+            "maintenance": {
+              "score": 0,
+              "status": "unknown"
+            },
+            "popularity": {
+              "score": 0,
+              "status": "unknown"
+            }
+          },
+          "overall_score": 0,
+          "overall_status": "unknown",
+          "recommendation": "Repository hosted on Gitlab - metrics not available"
+        },
+        "html_url": "https://foss.heptapod.net/openpyxl/openpyxl",
+        "language": "Unknown",
+        "open_issues_count": 0,
+        "platform": "gitlab",
+        "pushed_at": null,
+        "stargazers_count": 0
+      },
+      "name": "openpyxl",
+      "subdependencies": [
+        {
+          "name": "et-xmlfile",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        }
+      ],
+      "type": "python",
+      "version": "3.0.0"
+    },
+    {
+      "name": "python-dotenv",
+      "subdependencies": [],
+      "type": "python",
+      "version": "0.19.0"
+    },
+    {
+      "name": "toml",
+      "subdependencies": [],
+      "type": "python",
+      "version": "0.10.0"
+    }
+  ],
+  "filename": "requirements.txt",
+  "project_type": "python",
+  "sbom_data": {
+    "dependencies": [
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:15:15",
+          "closed_issues_count": 0,
+          "description": "The Python micro framework for building web applications.",
+          "forks_count": 16506,
+          "full_name": "pallets/flask",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 35,
+                "score": 3,
+                "status": "active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 16506,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 35,
+                "issue_ratio": 1.0,
+                "open_issues": 14,
+                "raw_score": 0.452,
+                "recency_score": 0.904,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 16506,
+                "raw_score": 30.11,
+                "score": 4,
+                "stars": 69975,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 14,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/pallets/flask",
+          "language": "Python",
+          "open_issues_count": 14,
+          "platform": "github",
+          "pushed_at": "2025-06-12T20:48:14Z",
+          "stargazers_count": 69975
+        },
+        "name": "Flask",
+        "type": "python",
+        "version": "2.0.0"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:15:15",
+          "closed_issues_count": 0,
+          "description": "The comprehensive WSGI web application library.",
+          "forks_count": 1738,
+          "full_name": "pallets/werkzeug",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 22,
+                "score": 4,
+                "status": "very_active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 1738,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 22,
+                "issue_ratio": 1.0,
+                "open_issues": 18,
+                "raw_score": 0.47,
+                "recency_score": 0.94,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 1738,
+                "raw_score": 23.49,
+                "score": 4,
+                "stars": 6759,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 15,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/pallets/werkzeug",
+          "language": "Python",
+          "open_issues_count": 18,
+          "platform": "github",
+          "pushed_at": "2025-06-25T20:29:20Z",
+          "stargazers_count": 6759
+        },
+        "name": "Werkzeug",
+        "type": "python",
+        "version": "2.0.0"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:15:15",
+          "closed_issues_count": 0,
+          "description": "A simple, yet elegant, HTTP library.",
+          "forks_count": 9501,
+          "full_name": "psf/requests",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 31,
+                "score": 3,
+                "status": "active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 9501,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 31,
+                "issue_ratio": 1.0,
+                "open_issues": 269,
+                "raw_score": 0.458,
+                "recency_score": 0.915,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 9501,
+                "raw_score": 28.91,
+                "score": 4,
+                "stars": 53049,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 14,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/psf/requests",
+          "language": "Python",
+          "open_issues_count": 269,
+          "platform": "github",
+          "pushed_at": "2025-06-16T19:10:38Z",
+          "stargazers_count": 53049
+        },
+        "name": "requests",
+        "type": "python",
+        "version": "2.25.0"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:15:15",
+          "closed_issues_count": 0,
+          "description": "Core utilities for Python packages",
+          "forks_count": 267,
+          "full_name": "pypa/packaging",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 14,
+                "score": 4,
+                "status": "very_active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 267,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 14,
+                "issue_ratio": 1.0,
+                "open_issues": 113,
+                "raw_score": 0.481,
+                "recency_score": 0.962,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 267,
+                "raw_score": 17.44,
+                "score": 4,
+                "stars": 664,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 15,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/pypa/packaging",
+          "language": "Python",
+          "open_issues_count": 113,
+          "platform": "github",
+          "pushed_at": "2025-07-03T21:02:02Z",
+          "stargazers_count": 664
+        },
+        "name": "packaging",
+        "type": "python",
+        "version": "21.0"
+      },
+      {
+        "github": {
+          "closed_issues_count": 0,
+          "description": "Repository hosted on Gitlab",
+          "forks_count": 0,
+          "full_name": "openpyxl/openpyxl",
+          "health": {
+            "max_score": 12,
+            "metrics": {
+              "activity": {
+                "score": 0,
+                "status": "unknown"
+              },
+              "community": {
+                "score": 0,
+                "status": "unknown"
+              },
+              "maintenance": {
+                "score": 0,
+                "status": "unknown"
+              },
+              "popularity": {
+                "score": 0,
+                "status": "unknown"
+              }
+            },
+            "overall_score": 0,
+            "overall_status": "unknown",
+            "recommendation": "Repository hosted on Gitlab - metrics not available"
+          },
+          "html_url": "https://foss.heptapod.net/openpyxl/openpyxl",
+          "language": "Unknown",
+          "open_issues_count": 0,
+          "platform": "gitlab",
+          "pushed_at": null,
+          "stargazers_count": 0
+        },
+        "name": "openpyxl",
+        "type": "python",
+        "version": "3.0.0"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:15:15",
+          "closed_issues_count": 0,
+          "description": "Reads key-value pairs from a .env file and can set them as environment variables. It helps in developing applications following the 12-factor principles.",
+          "forks_count": 465,
+          "full_name": "theskumar/python-dotenv",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 23,
+                "score": 4,
+                "status": "very_active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 465,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 23,
+                "issue_ratio": 1.0,
+                "open_issues": 60,
+                "raw_score": 0.468,
+                "recency_score": 0.937,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 465,
+                "raw_score": 21.87,
+                "score": 4,
+                "stars": 8251,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 15,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/theskumar/python-dotenv",
+          "language": "Python",
+          "open_issues_count": 60,
+          "platform": "github",
+          "pushed_at": "2025-06-24T10:26:02Z",
+          "stargazers_count": 8251
+        },
+        "name": "python-dotenv",
+        "type": "python",
+        "version": "0.19.0"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:15:15",
+          "closed_issues_count": 0,
+          "description": "Python lib for TOML",
+          "forks_count": 192,
+          "full_name": "uiri/toml",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 386,
+                "score": 1,
+                "status": "abandoned",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 192,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 386,
+                "issue_ratio": 1.0,
+                "open_issues": 134,
+                "raw_score": 0.0,
+                "recency_score": 0,
+                "score": 1,
+                "status": "poorly_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 192,
+                "raw_score": 17.73,
+                "score": 4,
+                "stars": 1127,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 10,
+            "overall_status": "good",
+            "recommendation": "Good choice - generally well-maintained"
+          },
+          "html_url": "https://github.com/uiri/toml",
+          "language": "Python",
+          "open_issues_count": 134,
+          "platform": "github",
+          "pushed_at": "2024-06-26T18:59:56Z",
+          "stargazers_count": 1127
+        },
+        "name": "toml",
+        "type": "python",
+        "version": "0.10.0"
+      }
+    ],
+    "dependency_tree": [
+      {
+        "name": "Flask",
+        "subdependencies": [
+          {
+            "name": "blinker",
+            "subdependencies": [],
+            "type": "python",
+            "version": "1.9.0"
+          },
+          {
+            "name": "click",
+            "subdependencies": [],
+            "type": "python",
+            "version": "8.1.3"
+          },
+          {
+            "name": "importlib-metadata",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "itsdangerous",
+            "subdependencies": [],
+            "type": "python",
+            "version": "2.2.0"
+          },
+          {
+            "name": "jinja2",
+            "subdependencies": [],
+            "type": "python",
+            "version": "3.1.2"
+          },
+          {
+            "name": "markupsafe",
+            "subdependencies": [],
+            "type": "python",
+            "version": "2.1.1"
+          }
+        ],
+        "type": "python",
+        "version": "2.0.0"
+      },
+      {
+        "name": "Werkzeug",
+        "subdependencies": [
+          {
+            "name": "MarkupSafe",
+            "subdependencies": [],
+            "type": "python",
+            "version": "2.1.1"
+          }
+        ],
+        "type": "python",
+        "version": "2.0.0"
+      },
+      {
+        "name": "requests",
+        "subdependencies": [
+          {
+            "name": "charset_normalizer",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "idna",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "urllib3",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "certifi",
+            "subdependencies": [],
+            "type": "python",
+            "version": "2017.4.17"
+          }
+        ],
+        "type": "python",
+        "version": "2.25.0"
+      },
+      {
+        "name": "packaging",
+        "subdependencies": [],
+        "type": "python",
+        "version": "21.0"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-22 03:27:46",
+          "closed_issues_count": 0,
+          "description": "Repository hosted on Gitlab",
+          "forks_count": 0,
+          "full_name": "openpyxl/openpyxl",
+          "health": {
+            "max_score": 12,
+            "metrics": {
+              "activity": {
+                "score": 0,
+                "status": "unknown"
+              },
+              "community": {
+                "score": 0,
+                "status": "unknown"
+              },
+              "maintenance": {
+                "score": 0,
+                "status": "unknown"
+              },
+              "popularity": {
+                "score": 0,
+                "status": "unknown"
+              }
+            },
+            "overall_score": 0,
+            "overall_status": "unknown",
+            "recommendation": "Repository hosted on Gitlab - metrics not available"
+          },
+          "html_url": "https://foss.heptapod.net/openpyxl/openpyxl",
+          "language": "Unknown",
+          "open_issues_count": 0,
+          "platform": "gitlab",
+          "pushed_at": null,
+          "stargazers_count": 0
+        },
+        "name": "openpyxl",
+        "subdependencies": [
+          {
+            "name": "et-xmlfile",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          }
+        ],
+        "type": "python",
+        "version": "3.0.0"
+      },
+      {
+        "name": "python-dotenv",
+        "subdependencies": [],
+        "type": "python",
+        "version": "0.19.0"
+      },
+      {
+        "name": "toml",
+        "subdependencies": [],
+        "type": "python",
+        "version": "0.10.0"
+      }
+    ]
+  },
+  "skipped_dependencies": [
+    "charset_normalizer",
+    "et-xmlfile",
+    "idna",
+    "importlib-metadata",
+    "urllib3"
+  ],
+  "vulnerabilities": {
+    "Flask": {
+      "package_name": "Flask",
+      "recommendation": "LOW RISK: This package has minor vulnerabilities. Monitor for updates and apply them when available.",
+      "risk_level": "low",
+      "risk_score": 12.0,
+      "version": "2.0.0",
+      "vulnerabilities": [
+        {
+          "cve_id": "GHSA-m2qf-hxjv-5gpq",
+          "cvss_score": 8.0,
+          "description": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
+          "id": "GHSA-m2qf-hxjv-5gpq",
+          "recommendation": "Update Flask to a patched version as soon as possible.",
+          "references": [
+            "https://github.com/pallets/flask/security/advisories/GHSA-m2qf-hxjv-5gpq",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-30861",
+            "https://github.com/pallets/flask/commit/70f906c51ce49c485f1d355703e9cc3386b1cc2b",
+            "https://github.com/pallets/flask/commit/afd63b16170b7c047f5758eb910c416511e9c965",
+            "https://github.com/pallets/flask",
+            "https://github.com/pallets/flask/releases/tag/2.2.5",
+            "https://github.com/pallets/flask/releases/tag/2.3.2",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/flask/PYSEC-2023-62.yaml",
+            "https://lists.debian.org/debian-lts-announce/2023/08/msg00024.html",
+            "https://security.netapp.com/advisory/ntap-20230818-0006",
+            "https://www.debian.org/security/2023/dsa-5442",
+            "https://osv.dev/vulnerability/GHSA-m2qf-hxjv-5gpq"
+          ],
+          "severity": "high",
+          "title": "GHSA-m2qf-hxjv-5gpq"
+        }
+      ],
+      "vulnerability_count": 1
+    },
+    "MarkupSafe": {
+      "package_name": "MarkupSafe",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "2.1.1",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "Werkzeug": {
+      "package_name": "Werkzeug",
+      "recommendation": "MEDIUM RISK: This package has moderate vulnerabilities. Consider updating to a newer version when possible.",
+      "risk_level": "medium",
+      "risk_score": 53.7,
+      "version": "2.0.0",
+      "vulnerabilities": [
+        {
+          "cve_id": "GHSA-2g68-c3qc-8985",
+          "cvss_score": 8.0,
+          "description": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
+          "id": "GHSA-2g68-c3qc-8985",
+          "recommendation": "Update Werkzeug to a patched version as soon as possible.",
+          "references": [
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-2g68-c3qc-8985",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-34069",
+            "https://github.com/pallets/werkzeug/commit/3386395b24c7371db11a5b8eaac0c91da5362692",
+            "https://github.com/pallets/werkzeug",
+            "https://lists.debian.org/debian-lts-announce/2025/02/msg00026.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/H4SH32AM3CTPMAAEOIDAN7VU565LO4IR",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HFERFN7PINV4MOGMGA3DPIXJPDCYOEJZ",
+            "https://security.netapp.com/advisory/ntap-20240614-0004",
+            "https://osv.dev/vulnerability/GHSA-2g68-c3qc-8985"
+          ],
+          "severity": "high",
+          "title": "GHSA-2g68-c3qc-8985"
+        },
+        {
+          "cve_id": "GHSA-f9vj-2wh5-fj8j",
+          "cvss_score": 5.5,
+          "description": "Werkzeug safe_join not safe on Windows",
+          "id": "GHSA-f9vj-2wh5-fj8j",
+          "recommendation": "Consider updating Werkzeug to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-f9vj-2wh5-fj8j",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-49766",
+            "https://github.com/pallets/werkzeug/commit/2767bcb10a7dd1c297d812cc5e6d11a474c1f092",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/releases/tag/3.0.6",
+            "https://security.netapp.com/advisory/ntap-20250131-0005",
+            "https://osv.dev/vulnerability/GHSA-f9vj-2wh5-fj8j"
+          ],
+          "severity": "medium",
+          "title": "GHSA-f9vj-2wh5-fj8j"
+        },
+        {
+          "cve_id": "GHSA-hrfv-mqp8-q5rw",
+          "cvss_score": 5.5,
+          "description": "Werkzeug DoS: High resource usage when parsing multipart/form-data containing a large part with CR/LF character at the beginning",
+          "id": "GHSA-hrfv-mqp8-q5rw",
+          "recommendation": "Consider updating Werkzeug to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-hrfv-mqp8-q5rw",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-46136",
+            "https://github.com/pallets/werkzeug/commit/b1916c0c083e0be1c9d887ee2f3d696922bfc5c1",
+            "https://github.com/pallets/werkzeug/commit/f2300208d5e2a5076cbbb4c2aad71096fd040ef9",
+            "https://github.com/pallets/werkzeug/commit/f3c803b3ade485a45f12b6d6617595350c0f03e2",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/werkzeug/PYSEC-2023-221.yaml",
+            "https://security.netapp.com/advisory/ntap-20231124-0008",
+            "https://osv.dev/vulnerability/GHSA-hrfv-mqp8-q5rw"
+          ],
+          "severity": "medium",
+          "title": "GHSA-hrfv-mqp8-q5rw"
+        },
+        {
+          "cve_id": "GHSA-px8h-6qxv-m22q",
+          "cvss_score": 3.0,
+          "description": "Incorrect parsing of nameless cookies leads to __Host- cookies bypass",
+          "id": "GHSA-px8h-6qxv-m22q",
+          "recommendation": "Monitor Werkzeug for security updates and apply them when available.",
+          "references": [
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-px8h-6qxv-m22q",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-23934",
+            "https://github.com/pallets/werkzeug/commit/cf275f42acad1b5950c50ffe8ef58fe62cdce028",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/releases/tag/2.2.3",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/werkzeug/PYSEC-2023-57.yaml",
+            "https://security.netapp.com/advisory/ntap-20230818-0003",
+            "https://www.debian.org/security/2023/dsa-5470",
+            "https://osv.dev/vulnerability/GHSA-px8h-6qxv-m22q"
+          ],
+          "severity": "low",
+          "title": "GHSA-px8h-6qxv-m22q"
+        },
+        {
+          "cve_id": "GHSA-q34m-jh98-gwm2",
+          "cvss_score": 5.5,
+          "description": "Werkzeug possible resource exhaustion when parsing file data in forms",
+          "id": "GHSA-q34m-jh98-gwm2",
+          "recommendation": "Consider updating Werkzeug to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-q34m-jh98-gwm2",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-49767",
+            "https://github.com/pallets/quart/commit/5e78c4169b8eb66b91ead3e62d44721b9e1644ee",
+            "https://github.com/pallets/quart/commit/abb04a512496206de279225340ed022852fbf51f",
+            "https://github.com/pallets/werkzeug/commit/50cfeebcb0727e18cc52ffbeb125f4a66551179b",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/releases/tag/3.0.6",
+            "https://security.netapp.com/advisory/ntap-20250103-0007",
+            "https://osv.dev/vulnerability/GHSA-q34m-jh98-gwm2"
+          ],
+          "severity": "medium",
+          "title": "GHSA-q34m-jh98-gwm2"
+        },
+        {
+          "cve_id": "GHSA-xg9f-g7g7-2323",
+          "cvss_score": 8.0,
+          "description": "High resource usage when parsing multipart form data with many fields",
+          "id": "GHSA-xg9f-g7g7-2323",
+          "recommendation": "Update Werkzeug to a patched version as soon as possible.",
+          "references": [
+            "https://github.com/pallets/werkzeug/security/advisories/GHSA-xg9f-g7g7-2323",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-25577",
+            "https://github.com/pallets/werkzeug/commit/517cac5a804e8c4dc4ed038bb20dacd038e7a9f1",
+            "https://github.com/pallets/werkzeug",
+            "https://github.com/pallets/werkzeug/releases/tag/2.2.3",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/werkzeug/PYSEC-2023-58.yaml",
+            "https://security.netapp.com/advisory/ntap-20230818-0003",
+            "https://www.debian.org/security/2023/dsa-5470",
+            "https://osv.dev/vulnerability/GHSA-xg9f-g7g7-2323"
+          ],
+          "severity": "high",
+          "title": "GHSA-xg9f-g7g7-2323"
+        },
+        {
+          "cve_id": "PYSEC-2022-203",
+          "cvss_score": 3.0,
+          "description": "** DISPUTED ** Improper parsing of HTTP requests in Pallets Werkzeug v2.1.0 and below allows attackers to perform HTTP Request Smuggling using a crafted HTTP request with multiple requests included inside the body. NOTE: the vendor's position is that this behavior can only occur in unsupported configurations involving development mode and an HTTP server from outside the Werkzeug project.",
+          "id": "PYSEC-2022-203",
+          "recommendation": "Monitor Werkzeug for security updates and apply them when available.",
+          "references": [
+            "https://github.com/pallets/werkzeug/commit/9a3a981d70d2e9ec3344b5192f86fcaf3210cd85",
+            "https://github.com/pallets/werkzeug/issues/2420",
+            "https://osv.dev/vulnerability/PYSEC-2022-203"
+          ],
+          "severity": "low",
+          "title": "PYSEC-2022-203"
+        }
+      ],
+      "vulnerability_count": 7
+    },
+    "blinker": {
+      "package_name": "blinker",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "1.9.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "certifi": {
+      "package_name": "certifi",
+      "recommendation": "LOW RISK: This package has minor vulnerabilities. Monitor for updates and apply them when available.",
+      "risk_level": "low",
+      "risk_score": 12.0,
+      "version": "2017.4.17",
+      "vulnerabilities": [
+        {
+          "cve_id": "GHSA-xqr8-7jwr-rhp7",
+          "cvss_score": 8.0,
+          "description": "Removal of e-Tugra root certificate",
+          "id": "GHSA-xqr8-7jwr-rhp7",
+          "recommendation": "Update certifi to a patched version as soon as possible.",
+          "references": [
+            "https://github.com/certifi/python-certifi/security/advisories/GHSA-xqr8-7jwr-rhp7",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-37920",
+            "https://github.com/certifi/python-certifi/commit/8fb96ed81f71e7097ed11bc4d9b19afd7ea5c909",
+            "https://github.com/certifi/python-certifi",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/certifi/PYSEC-2023-135.yaml",
+            "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/C-HrP1SEq1A",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5EX6NG7WUFNUKGFHLM35KHHU3GAKXRTG",
+            "https://security.netapp.com/advisory/ntap-20240912-0002",
+            "https://osv.dev/vulnerability/GHSA-xqr8-7jwr-rhp7"
+          ],
+          "severity": "high",
+          "title": "GHSA-xqr8-7jwr-rhp7"
+        }
+      ],
+      "vulnerability_count": 1
+    },
+    "charset_normalizer": {
+      "package_name": "charset_normalizer",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "click": {
+      "package_name": "click",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "8.1.3",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "et-xmlfile": {
+      "package_name": "et-xmlfile",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "idna": {
+      "package_name": "idna",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "importlib-metadata": {
+      "package_name": "importlib-metadata",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "itsdangerous": {
+      "package_name": "itsdangerous",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "2.2.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "jinja2": {
+      "package_name": "jinja2",
+      "recommendation": "MEDIUM RISK: This package has moderate vulnerabilities. Consider updating to a newer version when possible.",
+      "risk_level": "medium",
+      "risk_score": 34.3,
+      "version": "3.1.2",
+      "vulnerabilities": [
+        {
+          "cve_id": "GHSA-cpwx-vrp4-4pq7",
+          "cvss_score": 5.5,
+          "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+          "id": "GHSA-cpwx-vrp4-4pq7",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-cpwx-vrp4-4pq7",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27516",
+            "https://github.com/pallets/jinja/commit/90457bbf33b8662926ae65cdde4c4c32e756e403",
+            "https://github.com/pallets/jinja",
+            "https://lists.debian.org/debian-lts-announce/2025/04/msg00045.html",
+            "https://osv.dev/vulnerability/GHSA-cpwx-vrp4-4pq7"
+          ],
+          "severity": "medium",
+          "title": "GHSA-cpwx-vrp4-4pq7"
+        },
+        {
+          "cve_id": "GHSA-gmj6-6f8f-6699",
+          "cvss_score": 5.5,
+          "description": "Jinja has a sandbox breakout through malicious filenames",
+          "id": "GHSA-gmj6-6f8f-6699",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-gmj6-6f8f-6699",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-56201",
+            "https://github.com/pallets/jinja/issues/1792",
+            "https://github.com/pallets/jinja/commit/767b23617628419ae3709ccfb02f9602ae9fe51f",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/releases/tag/3.1.5",
+            "https://osv.dev/vulnerability/GHSA-gmj6-6f8f-6699"
+          ],
+          "severity": "medium",
+          "title": "GHSA-gmj6-6f8f-6699"
+        },
+        {
+          "cve_id": "GHSA-h5c8-rqwp-cp95",
+          "cvss_score": 5.5,
+          "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+          "id": "GHSA-h5c8-rqwp-cp95",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-h5c8-rqwp-cp95",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-22195",
+            "https://github.com/pallets/jinja/commit/716795349a41d4983a9a4771f7d883c96ea17be7",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/releases/tag/3.1.3",
+            "https://lists.debian.org/debian-lts-announce/2024/01/msg00010.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3",
+            "https://osv.dev/vulnerability/GHSA-h5c8-rqwp-cp95"
+          ],
+          "severity": "medium",
+          "title": "GHSA-h5c8-rqwp-cp95"
+        },
+        {
+          "cve_id": "GHSA-h75v-3vvj-5mfj",
+          "cvss_score": 5.5,
+          "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+          "id": "GHSA-h75v-3vvj-5mfj",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-h75v-3vvj-5mfj",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-34064",
+            "https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb",
+            "https://github.com/pallets/jinja",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS",
+            "https://osv.dev/vulnerability/GHSA-h75v-3vvj-5mfj"
+          ],
+          "severity": "medium",
+          "title": "GHSA-h75v-3vvj-5mfj"
+        },
+        {
+          "cve_id": "GHSA-q2x7-8rv6-6q7h",
+          "cvss_score": 5.5,
+          "description": "Jinja has a sandbox breakout through indirect reference to format method",
+          "id": "GHSA-q2x7-8rv6-6q7h",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-q2x7-8rv6-6q7h",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-56326",
+            "https://github.com/pallets/jinja/commit/48b0687e05a5466a91cd5812d604fa37ad0943b4",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/releases/tag/3.1.5",
+            "https://osv.dev/vulnerability/GHSA-q2x7-8rv6-6q7h"
+          ],
+          "severity": "medium",
+          "title": "GHSA-q2x7-8rv6-6q7h"
+        }
+      ],
+      "vulnerability_count": 5
+    },
+    "markupsafe": {
+      "package_name": "markupsafe",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "2.1.1",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "openpyxl": {
+      "package_name": "openpyxl",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "3.0.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "packaging": {
+      "package_name": "packaging",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "21.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "python-dotenv": {
+      "package_name": "python-dotenv",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "0.19.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "requests": {
+      "package_name": "requests",
+      "recommendation": "LOW RISK: This package has minor vulnerabilities. Monitor for updates and apply them when available.",
+      "risk_level": "low",
+      "risk_score": 19.8,
+      "version": "2.25.0",
+      "vulnerabilities": [
+        {
+          "cve_id": "GHSA-9hjg-9r4m-mvj7",
+          "cvss_score": 5.5,
+          "description": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+          "id": "GHSA-9hjg-9r4m-mvj7",
+          "recommendation": "Consider updating requests to a newer version when convenient.",
+          "references": [
+            "https://github.com/psf/requests/security/advisories/GHSA-9hjg-9r4m-mvj7",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-47081",
+            "https://github.com/psf/requests/pull/6965",
+            "https://github.com/psf/requests/commit/96ba401c1296ab1dda74a2365ef36d88f7d144ef",
+            "https://github.com/psf/requests",
+            "https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env",
+            "https://seclists.org/fulldisclosure/2025/Jun/2",
+            "http://seclists.org/fulldisclosure/2025/Jun/2",
+            "http://www.openwall.com/lists/oss-security/2025/06/03/11",
+            "http://www.openwall.com/lists/oss-security/2025/06/03/9",
+            "http://www.openwall.com/lists/oss-security/2025/06/04/1",
+            "http://www.openwall.com/lists/oss-security/2025/06/04/6",
+            "https://osv.dev/vulnerability/GHSA-9hjg-9r4m-mvj7"
+          ],
+          "severity": "medium",
+          "title": "GHSA-9hjg-9r4m-mvj7"
+        },
+        {
+          "cve_id": "GHSA-9wx4-h78v-vm56",
+          "cvss_score": 5.5,
+          "description": "Requests `Session` object does not verify requests after making first request with verify=False",
+          "id": "GHSA-9wx4-h78v-vm56",
+          "recommendation": "Consider updating requests to a newer version when convenient.",
+          "references": [
+            "https://github.com/psf/requests/security/advisories/GHSA-9wx4-h78v-vm56",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-35195",
+            "https://github.com/psf/requests/pull/6655",
+            "https://github.com/psf/requests/commit/a58d7f2ffb4d00b46dca2d70a3932a0b37e22fac",
+            "https://github.com/psf/requests",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IYLSNK5TL46Q6XPRVMHVWS63MVJQOK4Q",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/N7WP6EYDSUOCOJYHDK5NX43PYZ4SNHGZ",
+            "https://osv.dev/vulnerability/GHSA-9wx4-h78v-vm56"
+          ],
+          "severity": "medium",
+          "title": "GHSA-9wx4-h78v-vm56"
+        },
+        {
+          "cve_id": "GHSA-j8r2-6x86-q33q",
+          "cvss_score": 5.5,
+          "description": "Unintended leak of Proxy-Authorization header in requests",
+          "id": "GHSA-j8r2-6x86-q33q",
+          "recommendation": "Consider updating requests to a newer version when convenient.",
+          "references": [
+            "https://github.com/psf/requests/security/advisories/GHSA-j8r2-6x86-q33q",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-32681",
+            "https://github.com/psf/requests/commit/74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5",
+            "https://github.com/psf/requests",
+            "https://github.com/psf/requests/releases/tag/v2.31.0",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/requests/PYSEC-2023-74.yaml",
+            "https://lists.debian.org/debian-lts-announce/2023/06/msg00018.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AW7HNFGYP44RT3DUDQXG2QT3OEV2PJ7Y",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KOYASTZDGQG2BWLSNBPL3TQRL2G7QYNZ",
+            "https://security.gentoo.org/glsa/202309-08",
+            "https://osv.dev/vulnerability/GHSA-j8r2-6x86-q33q"
+          ],
+          "severity": "medium",
+          "title": "GHSA-j8r2-6x86-q33q"
+        }
+      ],
+      "vulnerability_count": 3
+    },
+    "toml": {
+      "package_name": "toml",
+      "recommendation": "This package has not been updated in 1723 days (4 years). It appears to be abandoned.",
+      "risk_level": "high",
+      "risk_score": 80.0,
+      "version": "0.10.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 1
+    },
+    "urllib3": {
+      "package_name": "urllib3",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    }
+  }
+}

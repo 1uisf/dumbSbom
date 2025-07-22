@@ -1,0 +1,1362 @@
+{
+  "dependencies": [
+    {
+      "name": "httpx",
+      "type": "python",
+      "version": "flexible"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-17 20:48:26",
+        "closed_issues_count": 0,
+        "description": "An async GitHub API library for Python",
+        "forks_count": 58,
+        "full_name": "gidgethub/gidgethub",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 38,
+              "score": 3,
+              "status": "active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 58,
+              "score": 3,
+              "status": "moderate_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 38,
+              "issue_ratio": 1.0,
+              "open_issues": 25,
+              "raw_score": 0.448,
+              "recency_score": 0.896,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 58,
+              "raw_score": 14.51,
+              "score": 4,
+              "stars": 395,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 13,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/gidgethub/gidgethub",
+        "language": "Python",
+        "open_issues_count": 25,
+        "platform": "github",
+        "pushed_at": "2025-06-09T17:29:15Z",
+        "stargazers_count": 395
+      },
+      "name": "gidgethub",
+      "type": "python",
+      "version": "4.0.0"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:09:42",
+        "closed_issues_count": 0,
+        "description": "The Web framework for perfectionists with deadlines.",
+        "forks_count": 32720,
+        "full_name": "django/django",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 0,
+              "score": 4,
+              "status": "very_active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 32720,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 0,
+              "issue_ratio": 1.0,
+              "open_issues": 358,
+              "raw_score": 0.5,
+              "recency_score": 1.0,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 32720,
+              "raw_score": 31.36,
+              "score": 4,
+              "stars": 84251,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 15,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/django/django",
+        "language": "Python",
+        "open_issues_count": 358,
+        "platform": "github",
+        "pushed_at": "2025-07-17T20:36:02Z",
+        "stargazers_count": 84251
+      },
+      "name": "django",
+      "type": "python",
+      "version": "2.1"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:09:42",
+        "closed_issues_count": 0,
+        "description": "The Web framework for perfectionists with deadlines.",
+        "forks_count": 32720,
+        "full_name": "django/django",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 0,
+              "score": 4,
+              "status": "very_active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 32720,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 0,
+              "issue_ratio": 1.0,
+              "open_issues": 358,
+              "raw_score": 0.5,
+              "recency_score": 1.0,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 32720,
+              "raw_score": 31.36,
+              "score": 4,
+              "stars": 84251,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 15,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/django/django",
+        "language": "Python",
+        "open_issues_count": 358,
+        "platform": "github",
+        "pushed_at": "2025-07-17T20:36:02Z",
+        "stargazers_count": 84251
+      },
+      "name": "django",
+      "type": "python",
+      "version": "2.0"
+    },
+    {
+      "name": "PyQt5",
+      "type": "python",
+      "version": "flexible"
+    },
+    {
+      "name": "rich",
+      "type": "python",
+      "version": "flexible"
+    },
+    {
+      "name": "click",
+      "type": "python",
+      "version": "flexible"
+    }
+  ],
+  "dependency_tree": [
+    {
+      "dev": false,
+      "name": "httpx",
+      "subdependencies": [
+        {
+          "name": "anyio",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "certifi",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "httpcore",
+          "subdependencies": [],
+          "type": "python",
+          "version": "1.*"
+        },
+        {
+          "name": "idna",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        }
+      ],
+      "type": "python",
+      "version": "flexible"
+    },
+    {
+      "dev": false,
+      "name": "gidgethub",
+      "subdependencies": [
+        {
+          "name": "uritemplate",
+          "subdependencies": [],
+          "type": "python",
+          "version": "3.0.1"
+        },
+        {
+          "name": "PyJWT",
+          "subdependencies": [],
+          "type": "python",
+          "version": "2.4.0"
+        }
+      ],
+      "type": "python",
+      "version": "4.0.0"
+    },
+    {
+      "dev": false,
+      "name": "django",
+      "subdependencies": [
+        {
+          "name": "asgiref",
+          "subdependencies": [],
+          "type": "python",
+          "version": "3.8.1"
+        },
+        {
+          "name": "sqlparse",
+          "subdependencies": [],
+          "type": "python",
+          "version": "0.3.1"
+        },
+        {
+          "name": "tzdata; sys_platform",
+          "subdependencies": [],
+          "type": "python",
+          "version": "\"win32\""
+        }
+      ],
+      "type": "python",
+      "version": "2.1"
+    },
+    {
+      "dev": false,
+      "name": "django",
+      "subdependencies": [
+        {
+          "name": "asgiref",
+          "subdependencies": [],
+          "type": "python",
+          "version": "3.8.1"
+        },
+        {
+          "name": "sqlparse",
+          "subdependencies": [],
+          "type": "python",
+          "version": "0.3.1"
+        },
+        {
+          "name": "tzdata; sys_platform",
+          "subdependencies": [],
+          "type": "python",
+          "version": "\"win32\""
+        }
+      ],
+      "type": "python",
+      "version": "2.0"
+    },
+    {
+      "dev": true,
+      "name": "PyQt5",
+      "subdependencies": [
+        {
+          "name": "PyQt5-sip",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "PyQt5-Qt5",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        }
+      ],
+      "type": "python",
+      "version": "flexible"
+    },
+    {
+      "dev": true,
+      "name": "rich",
+      "subdependencies": [
+        {
+          "name": "typing-extensions",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "pygments",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "markdown-it-py",
+          "subdependencies": [],
+          "type": "python",
+          "version": "2.2.0"
+        }
+      ],
+      "type": "python",
+      "version": "flexible"
+    },
+    {
+      "dev": true,
+      "name": "click",
+      "subdependencies": [
+        {
+          "name": "colorama; platform_system",
+          "subdependencies": [],
+          "type": "python",
+          "version": "\"Windows\""
+        }
+      ],
+      "type": "python",
+      "version": "flexible"
+    }
+  ],
+  "filename": "requirements.txt",
+  "project_type": "python",
+  "sbom_data": {
+    "dependencies": [
+      {
+        "name": "httpx",
+        "type": "python",
+        "version": "flexible"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-17 20:48:26",
+          "closed_issues_count": 0,
+          "description": "An async GitHub API library for Python",
+          "forks_count": 58,
+          "full_name": "gidgethub/gidgethub",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 38,
+                "score": 3,
+                "status": "active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 58,
+                "score": 3,
+                "status": "moderate_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 38,
+                "issue_ratio": 1.0,
+                "open_issues": 25,
+                "raw_score": 0.448,
+                "recency_score": 0.896,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 58,
+                "raw_score": 14.51,
+                "score": 4,
+                "stars": 395,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 13,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/gidgethub/gidgethub",
+          "language": "Python",
+          "open_issues_count": 25,
+          "platform": "github",
+          "pushed_at": "2025-06-09T17:29:15Z",
+          "stargazers_count": 395
+        },
+        "name": "gidgethub",
+        "type": "python",
+        "version": "4.0.0"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:09:42",
+          "closed_issues_count": 0,
+          "description": "The Web framework for perfectionists with deadlines.",
+          "forks_count": 32720,
+          "full_name": "django/django",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 0,
+                "score": 4,
+                "status": "very_active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 32720,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 0,
+                "issue_ratio": 1.0,
+                "open_issues": 358,
+                "raw_score": 0.5,
+                "recency_score": 1.0,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 32720,
+                "raw_score": 31.36,
+                "score": 4,
+                "stars": 84251,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 15,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/django/django",
+          "language": "Python",
+          "open_issues_count": 358,
+          "platform": "github",
+          "pushed_at": "2025-07-17T20:36:02Z",
+          "stargazers_count": 84251
+        },
+        "name": "django",
+        "type": "python",
+        "version": "2.1"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:09:42",
+          "closed_issues_count": 0,
+          "description": "The Web framework for perfectionists with deadlines.",
+          "forks_count": 32720,
+          "full_name": "django/django",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 0,
+                "score": 4,
+                "status": "very_active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 32720,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 0,
+                "issue_ratio": 1.0,
+                "open_issues": 358,
+                "raw_score": 0.5,
+                "recency_score": 1.0,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 32720,
+                "raw_score": 31.36,
+                "score": 4,
+                "stars": 84251,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 15,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/django/django",
+          "language": "Python",
+          "open_issues_count": 358,
+          "platform": "github",
+          "pushed_at": "2025-07-17T20:36:02Z",
+          "stargazers_count": 84251
+        },
+        "name": "django",
+        "type": "python",
+        "version": "2.0"
+      },
+      {
+        "name": "PyQt5",
+        "type": "python",
+        "version": "flexible"
+      },
+      {
+        "name": "rich",
+        "type": "python",
+        "version": "flexible"
+      },
+      {
+        "name": "click",
+        "type": "python",
+        "version": "flexible"
+      }
+    ],
+    "dependency_tree": [
+      {
+        "dev": false,
+        "name": "httpx",
+        "subdependencies": [
+          {
+            "name": "anyio",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "certifi",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "httpcore",
+            "subdependencies": [],
+            "type": "python",
+            "version": "1.*"
+          },
+          {
+            "name": "idna",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          }
+        ],
+        "type": "python",
+        "version": "flexible"
+      },
+      {
+        "dev": false,
+        "name": "gidgethub",
+        "subdependencies": [
+          {
+            "name": "uritemplate",
+            "subdependencies": [],
+            "type": "python",
+            "version": "3.0.1"
+          },
+          {
+            "name": "PyJWT",
+            "subdependencies": [],
+            "type": "python",
+            "version": "2.4.0"
+          }
+        ],
+        "type": "python",
+        "version": "4.0.0"
+      },
+      {
+        "dev": false,
+        "name": "django",
+        "subdependencies": [
+          {
+            "name": "asgiref",
+            "subdependencies": [],
+            "type": "python",
+            "version": "3.8.1"
+          },
+          {
+            "name": "sqlparse",
+            "subdependencies": [],
+            "type": "python",
+            "version": "0.3.1"
+          },
+          {
+            "name": "tzdata; sys_platform",
+            "subdependencies": [],
+            "type": "python",
+            "version": "\"win32\""
+          }
+        ],
+        "type": "python",
+        "version": "2.1"
+      },
+      {
+        "dev": false,
+        "name": "django",
+        "subdependencies": [
+          {
+            "name": "asgiref",
+            "subdependencies": [],
+            "type": "python",
+            "version": "3.8.1"
+          },
+          {
+            "name": "sqlparse",
+            "subdependencies": [],
+            "type": "python",
+            "version": "0.3.1"
+          },
+          {
+            "name": "tzdata; sys_platform",
+            "subdependencies": [],
+            "type": "python",
+            "version": "\"win32\""
+          }
+        ],
+        "type": "python",
+        "version": "2.0"
+      },
+      {
+        "dev": true,
+        "name": "PyQt5",
+        "subdependencies": [
+          {
+            "name": "PyQt5-sip",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "PyQt5-Qt5",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          }
+        ],
+        "type": "python",
+        "version": "flexible"
+      },
+      {
+        "dev": true,
+        "name": "rich",
+        "subdependencies": [
+          {
+            "name": "typing-extensions",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "pygments",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "markdown-it-py",
+            "subdependencies": [],
+            "type": "python",
+            "version": "2.2.0"
+          }
+        ],
+        "type": "python",
+        "version": "flexible"
+      },
+      {
+        "dev": true,
+        "name": "click",
+        "subdependencies": [
+          {
+            "name": "colorama; platform_system",
+            "subdependencies": [],
+            "type": "python",
+            "version": "\"Windows\""
+          }
+        ],
+        "type": "python",
+        "version": "flexible"
+      }
+    ]
+  },
+  "skipped_dependencies": [
+    "PyQt5",
+    "click",
+    "httpx",
+    "rich",
+    "tzdata; sys_platform"
+  ],
+  "vulnerabilities": {
+    "PyJWT": {
+      "package_name": "PyJWT",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "2.4.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "PyQt5": {
+      "package_name": "PyQt5",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "asgiref": {
+      "package_name": "asgiref",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "3.8.1",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "click": {
+      "package_name": "click",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "django": {
+      "package_name": "django",
+      "recommendation": "CRITICAL: This package has severe vulnerabilities. Consider replacing it with a secure alternative or updating to a patched version immediately.",
+      "risk_level": "critical",
+      "risk_score": 100.0,
+      "version": "2.0",
+      "vulnerabilities": [
+        {
+          "cve_id": "GHSA-2f9x-5v75-3qv4",
+          "cvss_score": 3.0,
+          "description": "Django Denial-of-service possibility in truncatechars_html and truncatewords_html template filters",
+          "id": "GHSA-2f9x-5v75-3qv4",
+          "recommendation": "Monitor django for security updates and apply them when available.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-7537",
+            "https://github.com/django/django/commit/94c5da1d17a6b0d378866c66b605102c19f7988c",
+            "https://github.com/django/django/commit/a91436360b79a6ff995c3e5018bcc666dfaf1539",
+            "https://github.com/django/django/commit/d17974a287a6ea2e361daff88fcc004cbd6835fa",
+            "https://access.redhat.com/errata/RHSA-2018:2927",
+            "https://access.redhat.com/errata/RHSA-2019:0265",
+            "https://github.com/advisories/GHSA-2f9x-5v75-3qv4",
+            "https://github.com/django/django",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2018-6.yaml",
+            "https://lists.debian.org/debian-lts-announce/2018/03/msg00006.html",
+            "https://usn.ubuntu.com/3591-1",
+            "https://www.debian.org/security/2018/dsa-4161",
+            "https://www.djangoproject.com/weblog/2018/mar/06/security-releases",
+            "https://osv.dev/vulnerability/GHSA-2f9x-5v75-3qv4"
+          ],
+          "severity": "low",
+          "title": "GHSA-2f9x-5v75-3qv4"
+        },
+        {
+          "cve_id": "GHSA-337x-4q8g-prc5",
+          "cvss_score": 8.0,
+          "description": "Improper Input Validation in Django",
+          "id": "GHSA-337x-4q8g-prc5",
+          "recommendation": "Update django to a patched version as soon as possible.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-3498",
+            "https://docs.djangoproject.com/en/dev/releases/security",
+            "https://github.com/advisories/GHSA-337x-4q8g-prc5",
+            "https://github.com/django/django",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2019-17.yaml",
+            "https://groups.google.com/forum/#!topic/django-announce/VYU7xQQTEPQ",
+            "https://lists.debian.org/debian-lts-announce/2019/01/msg00005.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVXDOVCXLD74SHR2BENGCE2OOYYYWJHZ",
+            "https://usn.ubuntu.com/3851-1",
+            "https://web.archive.org/web/20200227094237/http://www.securityfocus.com/bid/106453",
+            "https://www.debian.org/security/2019/dsa-4363",
+            "https://www.djangoproject.com/weblog/2019/jan/04/security-releases",
+            "https://osv.dev/vulnerability/GHSA-337x-4q8g-prc5"
+          ],
+          "severity": "high",
+          "title": "GHSA-337x-4q8g-prc5"
+        },
+        {
+          "cve_id": "GHSA-5hg3-6c2f-f3wr",
+          "cvss_score": 5.5,
+          "description": "Django open redirect",
+          "id": "GHSA-5hg3-6c2f-f3wr",
+          "recommendation": "Consider updating django to a newer version when convenient.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-14574",
+            "https://github.com/django/django/commit/6fffc3c6d420e44f4029d5643f38d00a39b08525",
+            "https://github.com/django/django/commit/c4e5ff7fdb5fce447675e90291fd33fddd052b3c",
+            "https://github.com/django/django/commit/d6eaee092709aad477a9894598496c6deec532ff",
+            "https://access.redhat.com/errata/RHSA-2019:0265",
+            "https://github.com/advisories/GHSA-5hg3-6c2f-f3wr",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2018-2.yaml",
+            "https://usn.ubuntu.com/3726-1",
+            "https://web.archive.org/web/20190901075632/http://www.securitytracker.com/id/1041403",
+            "https://web.archive.org/web/20200227115315/http://www.securityfocus.com/bid/104970",
+            "https://www.debian.org/security/2018/dsa-4264",
+            "https://www.djangoproject.com/weblog/2018/aug/01/security-releases",
+            "https://osv.dev/vulnerability/GHSA-5hg3-6c2f-f3wr"
+          ],
+          "severity": "medium",
+          "title": "GHSA-5hg3-6c2f-f3wr"
+        },
+        {
+          "cve_id": "GHSA-68w8-qjq3-2gfm",
+          "cvss_score": 5.5,
+          "description": "Path Traversal in Django",
+          "id": "GHSA-68w8-qjq3-2gfm",
+          "recommendation": "Consider updating django to a newer version when convenient.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-33203",
+            "https://github.com/django/django/commit/053cc9534d174dc89daba36724ed2dcb36755b90",
+            "https://github.com/django/django/commit/20c67a0693c4ede2b09af02574823485e82e4c8f",
+            "https://github.com/django/django/commit/dfaba12cda060b8b292ae1d271b44bf810b1c5b9",
+            "https://docs.djangoproject.com/en/3.2/releases/security",
+            "https://github.com/advisories/GHSA-68w8-qjq3-2gfm",
+            "https://github.com/django/django",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2021-98.yaml",
+            "https://groups.google.com/forum/#!forum/django-announce",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/B4SQG2EAF4WCI2SLRL6XRDJ3RPK3ZRDV",
+            "https://security.netapp.com/advisory/ntap-20210727-0004",
+            "https://www.djangoproject.com/weblog/2021/jun/02/security-releases",
+            "https://osv.dev/vulnerability/GHSA-68w8-qjq3-2gfm"
+          ],
+          "severity": "medium",
+          "title": "GHSA-68w8-qjq3-2gfm"
+        },
+        {
+          "cve_id": "GHSA-6c3j-c64m-qhgq",
+          "cvss_score": 5.5,
+          "description": "XSS in jQuery as used in Drupal, Backdrop CMS, and other products",
+          "id": "GHSA-6c3j-c64m-qhgq",
+          "recommendation": "Consider updating django to a newer version when convenient.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-11358",
+            "https://github.com/maximebf/php-debugbar/issues/447",
+            "https://github.com/jquery/jquery/pull/4333",
+            "https://github.com/maximebf/php-debugbar/commit/847216e60544258c881f2733d699bbcfeefac0fc",
+            "https://github.com/django/django/commit/34ec52269ade54af31a021b12969913129571a3f",
+            "https://github.com/django/django/commit/95649bc08547a878cebfa1d019edec8cb1b80829",
+            "https://github.com/django/django/commit/baaf187a4e354bf3976c51e2c83a0d2f8ee6e6ad",
+            "https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/WZW27UCJ5CYFL4KFFFMYMIBNMIU2ALG5",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4UOAZIFCSZ3ENEFOR5IXX6NFAD3HV7FA",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5IABSKTYZ5JUGL735UKGXL5YPRYOPUYI",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KYH3OAGR2RTCHRA5NOKX2TES7SNQMWGO",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QV3PKZC3PQCO3273HAT76PAQZFBEO4KP",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RLXRX23725JL366CNZGJZ7AQQB7LHQ6F",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WZW27UCJ5CYFL4KFFFMYMIBNMIU2ALG5",
+            "https://seclists.org/bugtraq/2019/Apr/32",
+            "https://seclists.org/bugtraq/2019/Jun/12",
+            "https://seclists.org/bugtraq/2019/May/18",
+            "https://www.tenable.com/security/tns-2020-02",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/RLXRX23725JL366CNZGJZ7AQQB7LHQ6F",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QV3PKZC3PQCO3273HAT76PAQZFBEO4KP",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KYH3OAGR2RTCHRA5NOKX2TES7SNQMWGO",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/5IABSKTYZ5JUGL735UKGXL5YPRYOPUYI",
+            "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/4UOAZIFCSZ3ENEFOR5IXX6NFAD3HV7FA",
+            "https://lists.debian.org/debian-lts-announce/2023/08/msg00040.html",
+            "https://lists.debian.org/debian-lts-announce/2020/02/msg00024.html",
+            "https://lists.debian.org/debian-lts-announce/2019/05/msg00029.html",
+            "https://lists.debian.org/debian-lts-announce/2019/05/msg00006.html",
+            "https://lists.apache.org/thread.html/rca37935d661f4689cb4119f1b3b224413b22be161b678e6e6ce0c69b@%3Ccommits.nifi.apache.org%3E",
+            "https://lists.apache.org/thread.html/rca37935d661f4689cb4119f1b3b224413b22be161b678e6e6ce0c69b%40%3Ccommits.nifi.apache.org%3E",
+            "https://lists.apache.org/thread.html/rac25da84ecdcd36f6de5ad0d255f4e967209bbbebddb285e231da37d@%3Cissues.flink.apache.org%3E",
+            "https://www.tenable.com/security/tns-2019-08",
+            "https://www.synology.com/security/advisory/Synology_SA_19_19",
+            "https://www.privacy-wise.com/mitigating-cve-2019-11358-in-old-versions-of-jquery",
+            "https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html",
+            "https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html",
+            "https://www.oracle.com/security-alerts/cpuoct2021.html",
+            "https://www.oracle.com/security-alerts/cpuoct2020.html",
+            "https://www.oracle.com/security-alerts/cpujul2020.html",
+            "https://www.oracle.com/security-alerts/cpujan2022.html",
+            "https://www.oracle.com/security-alerts/cpujan2021.html",
+            "https://www.oracle.com/security-alerts/cpujan2020.html",
+            "https://www.oracle.com/security-alerts/cpuapr2020.html",
+            "https://www.oracle.com/security-alerts/cpuApr2021.html",
+            "https://www.oracle.com//security-alerts/cpujul2021.html",
+            "https://www.drupal.org/sa-core-2019-006",
+            "https://www.djangoproject.com/weblog/2019/jun/03/security-releases",
+            "https://www.debian.org/security/2019/dsa-4460",
+            "https://www.debian.org/security/2019/dsa-4434",
+            "https://web.archive.org/web/20190824065237/http://www.securityfocus.com/bid/108023",
+            "https://supportportal.juniper.net/s/article/2021-07-Security-Bulletin-Junos-OS-Multiple-J-Web-vulnerabilities-resolved-in-Junos-OS-21-2R1",
+            "https://snyk.io/vuln/SNYK-JS-JQUERY-174006",
+            "https://security.snyk.io/vuln/SNYK-DOTNET-JQUERY-450226",
+            "https://security.netapp.com/advisory/ntap-20190919-0001",
+            "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E",
+            "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442%40%3Cdev.drill.apache.org%3E",
+            "https://lists.apache.org/thread.html/88fb0362fd40e5b605ea8149f63241537b8b6fb5bfa315391fc5cbb7@%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/88fb0362fd40e5b605ea8149f63241537b8b6fb5bfa315391fc5cbb7%40%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/6097cdbd6f0a337bedd9bb5cc441b2d525ff002a96531de367e4259f@%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/6097cdbd6f0a337bedd9bb5cc441b2d525ff002a96531de367e4259f%40%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/5928aa293e39d248266472210c50f176cac1535220f2486e6a7fa844@%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/5928aa293e39d248266472210c50f176cac1535220f2486e6a7fa844%40%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E",
+            "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f%40%3Cdev.drill.apache.org%3E",
+            "https://lists.apache.org/thread.html/08720ef215ee7ab3386c05a1a90a7d1c852bf0706f176a7816bf65fc@%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/08720ef215ee7ab3386c05a1a90a7d1c852bf0706f176a7816bf65fc%40%3Ccommits.airflow.apache.org%3E",
+            "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44601",
+            "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2019-11358.yml",
+            "https://github.com/rails/jquery-rails/blob/master/CHANGELOG.md#434",
+            "https://github.com/jquery/jquery",
+            "https://blog.jquery.com/2019/04/10/jquery-3-4-0-released",
+            "https://backdropcms.org/security/backdrop-sa-core-2019-009",
+            "https://access.redhat.com/errata/RHSA-2019:3024",
+            "https://access.redhat.com/errata/RHSA-2019:3023",
+            "https://access.redhat.com/errata/RHSA-2019:2587",
+            "https://access.redhat.com/errata/RHSA-2019:1456",
+            "https://access.redhat.com/errata/RHBA-2019:1570",
+            "https://lists.apache.org/thread.html/rac25da84ecdcd36f6de5ad0d255f4e967209bbbebddb285e231da37d%40%3Cissues.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r7e8ebccb7c022e41295f6fdb7b971209b83702339f872ddd8cf8bf73@%3Cissues.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r7e8ebccb7c022e41295f6fdb7b971209b83702339f872ddd8cf8bf73%40%3Cissues.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r7d64895cc4dff84d0becfc572b20c0e4bf9bfa7b10c6f5f73e783734@%3Cdev.storm.apache.org%3E",
+            "https://lists.apache.org/thread.html/r7d64895cc4dff84d0becfc572b20c0e4bf9bfa7b10c6f5f73e783734%40%3Cdev.storm.apache.org%3E",
+            "https://lists.apache.org/thread.html/r7aac081cbddb6baa24b75e74abf0929bf309b176755a53e3ed810355@%3Cdev.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r7aac081cbddb6baa24b75e74abf0929bf309b176755a53e3ed810355%40%3Cdev.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r41b5bfe009c845f67d4f68948cc9419ac2d62e287804aafd72892b08@%3Cissues.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r41b5bfe009c845f67d4f68948cc9419ac2d62e287804aafd72892b08%40%3Cissues.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r38f0d1aa3c923c22977fe7376508f030f22e22c1379fbb155bf29766@%3Cdev.syncope.apache.org%3E",
+            "https://lists.apache.org/thread.html/r38f0d1aa3c923c22977fe7376508f030f22e22c1379fbb155bf29766%40%3Cdev.syncope.apache.org%3E",
+            "https://lists.apache.org/thread.html/r2baacab6e0acb5a2092eb46ae04fd6c3e8277b4fd79b1ffb7f3254fa@%3Cissues.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r2baacab6e0acb5a2092eb46ae04fd6c3e8277b4fd79b1ffb7f3254fa%40%3Cissues.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r2041a75d3fc09dec55adfd95d598b38d22715303f65c997c054844c9@%3Cissues.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/r2041a75d3fc09dec55adfd95d598b38d22715303f65c997c054844c9%40%3Cissues.flink.apache.org%3E",
+            "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E",
+            "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc%40%3Cissues.drill.apache.org%3E",
+            "https://lists.apache.org/thread.html/bcce5a9c532b386c68dab2f6b3ce8b0cc9b950ec551766e76391caa3@%3Ccommits.nifi.apache.org%3E",
+            "https://lists.apache.org/thread.html/bcce5a9c532b386c68dab2f6b3ce8b0cc9b950ec551766e76391caa3%40%3Ccommits.nifi.apache.org%3E",
+            "https://lists.apache.org/thread.html/ba79cf1658741e9f146e4c59b50aee56656ea95d841d358d006c18b6@%3Ccommits.roller.apache.org%3E",
+            "https://lists.apache.org/thread.html/ba79cf1658741e9f146e4c59b50aee56656ea95d841d358d006c18b6%40%3Ccommits.roller.apache.org%3E",
+            "https://lists.apache.org/thread.html/b736d0784cf02f5a30fbb4c5902762a15ad6d47e17e2c5a17b7d6205@%3Ccommits.airflow.apache.org%3E",
+            "https://lists.apache.org/thread.html/b736d0784cf02f5a30fbb4c5902762a15ad6d47e17e2c5a17b7d6205%40%3Ccommits.airflow.apache.org%3E",
+            "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00006.html",
+            "http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00025.html",
+            "http://packetstormsecurity.com/files/152787/dotCMS-5.1.1-Vulnerable-Dependencies.html",
+            "http://packetstormsecurity.com/files/153237/RetireJS-CORS-Issue-Script-Execution.html",
+            "http://packetstormsecurity.com/files/156743/OctoberCMS-Insecure-Dependencies.html",
+            "http://seclists.org/fulldisclosure/2019/May/10",
+            "http://seclists.org/fulldisclosure/2019/May/11",
+            "http://seclists.org/fulldisclosure/2019/May/13",
+            "http://www.openwall.com/lists/oss-security/2019/06/03/2",
+            "http://www.securityfocus.com/bid/108023",
+            "https://osv.dev/vulnerability/GHSA-6c3j-c64m-qhgq"
+          ],
+          "severity": "medium",
+          "title": "GHSA-6c3j-c64m-qhgq"
+        },
+        {
+          "cve_id": "GHSA-7xr5-9hcq-chf9",
+          "cvss_score": 5.5,
+          "description": "Django Improper Output Neutralization for Logs vulnerability",
+          "id": "GHSA-7xr5-9hcq-chf9",
+          "recommendation": "Consider updating django to a newer version when convenient.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-48432",
+            "https://docs.djangoproject.com/en/dev/releases/security",
+            "https://github.com/django/django",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2025-47.yaml",
+            "https://groups.google.com/g/django-announce",
+            "https://www.djangoproject.com/weblog/2025/jun/04/security-releases",
+            "https://www.djangoproject.com/weblog/2025/jun/10/bugfix-releases",
+            "http://www.openwall.com/lists/oss-security/2025/06/04/5",
+            "http://www.openwall.com/lists/oss-security/2025/06/10/2",
+            "http://www.openwall.com/lists/oss-security/2025/06/10/3",
+            "http://www.openwall.com/lists/oss-security/2025/06/10/4",
+            "https://osv.dev/vulnerability/GHSA-7xr5-9hcq-chf9"
+          ],
+          "severity": "medium",
+          "title": "GHSA-7xr5-9hcq-chf9"
+        },
+        {
+          "cve_id": "GHSA-8x94-hmjh-97hq",
+          "cvss_score": 8.0,
+          "description": "Django vulnerable to Reflected File Download attack",
+          "id": "GHSA-8x94-hmjh-97hq",
+          "recommendation": "Update django to a patched version as soon as possible.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-36359",
+            "https://github.com/django/django/commit/b3e4494d759202a3b6bf247fd34455bf13be5b80",
+            "https://github.com/django/django/commit/b7d9529cbe0af4adabb6ea5d01ed8dcce3668fb3",
+            "https://github.com/django/django/commit/bd062445cffd3f6cc6dcd20d13e2abed818fa173",
+            "https://docs.djangoproject.com/en/4.0/releases/security",
+            "https://github.com/django/django",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2022-245.yaml",
+            "https://groups.google.com/g/django-announce/c/8cz--gvaJr4",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HWY6DQWRVBALV73BPUVBXC3QIYUM24IK",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LTZVAKU5ALQWOKFTPISE257VCVIYGFQI",
+            "https://security.netapp.com/advisory/ntap-20220915-0008",
+            "https://www.debian.org/security/2022/dsa-5254",
+            "https://www.djangoproject.com/weblog/2022/aug/03/security-releases",
+            "http://www.openwall.com/lists/oss-security/2022/08/03/1",
+            "https://osv.dev/vulnerability/GHSA-8x94-hmjh-97hq"
+          ],
+          "severity": "high",
+          "title": "GHSA-8x94-hmjh-97hq"
+        },
+        {
+          "cve_id": "GHSA-hmr4-m2h5-33qx",
+          "cvss_score": 9.5,
+          "description": "SQL injection in Django",
+          "id": "GHSA-hmr4-m2h5-33qx",
+          "recommendation": "Immediately update django to the latest secure version or consider alternative packages.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-7471",
+            "https://github.com/django/django/commit/001b0634cd309e372edb6d7d95d083d02b8e37bd",
+            "https://github.com/django/django/commit/505826b469b16ab36693360da9e11fd13213421b",
+            "https://github.com/django/django/commit/c67a368c16e4680b324b4f385398d638db4d8147",
+            "https://github.com/django/django/commit/eb31d845323618d688ad429479c6dda973056136",
+            "https://www.openwall.com/lists/oss-security/2020/02/03/1",
+            "https://www.djangoproject.com/weblog/2020/feb/03/security-releases",
+            "https://www.debian.org/security/2020/dsa-4629",
+            "https://usn.ubuntu.com/4264-1",
+            "https://security.netapp.com/advisory/ntap-20200221-0006",
+            "https://security.gentoo.org/glsa/202004-17",
+            "https://seclists.org/bugtraq/2020/Feb/30",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4A2AP4T7RKPBCLTI2NNQG3T6MINDUUMZ",
+            "https://groups.google.com/forum/#!topic/django-announce/X45S86X5bZI",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2020-35.yaml",
+            "https://github.com/django/django",
+            "https://github.com/advisories/GHSA-hmr4-m2h5-33qx",
+            "https://docs.djangoproject.com/en/3.0/releases/security",
+            "http://www.openwall.com/lists/oss-security/2020/02/03/1",
+            "https://osv.dev/vulnerability/GHSA-hmr4-m2h5-33qx"
+          ],
+          "severity": "critical",
+          "title": "GHSA-hmr4-m2h5-33qx"
+        },
+        {
+          "cve_id": "GHSA-r28v-mw67-m5p9",
+          "cvss_score": 5.5,
+          "description": "Django denial-of-service possibility in urlize and urlizetrunc template filters",
+          "id": "GHSA-r28v-mw67-m5p9",
+          "recommendation": "Consider updating django to a newer version when convenient.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-7536",
+            "https://github.com/django/django/commit/1ca63a66ef3163149ad822701273e8a1844192c2",
+            "https://github.com/django/django/commit/abf89d729f210c692a50e0ad3f75fb6bec6fae16",
+            "https://github.com/django/django/commit/e157315da3ae7005fa0683ffc9751dbeca7306c8",
+            "https://access.redhat.com/errata/RHSA-2018:2927",
+            "https://access.redhat.com/errata/RHSA-2019:0051",
+            "https://access.redhat.com/errata/RHSA-2019:0082",
+            "https://access.redhat.com/errata/RHSA-2019:0265",
+            "https://github.com/advisories/GHSA-r28v-mw67-m5p9",
+            "https://github.com/django/django",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2018-5.yaml",
+            "https://lists.debian.org/debian-lts-announce/2018/03/msg00006.html",
+            "https://usn.ubuntu.com/3591-1",
+            "https://web.archive.org/web/20200227131019/http://www.securityfocus.com/bid/103361",
+            "https://www.debian.org/security/2018/dsa-4161",
+            "https://www.djangoproject.com/weblog/2018/mar/06/security-releases",
+            "https://osv.dev/vulnerability/GHSA-r28v-mw67-m5p9"
+          ],
+          "severity": "medium",
+          "title": "GHSA-r28v-mw67-m5p9"
+        },
+        {
+          "cve_id": "GHSA-rf4j-j272-fj86",
+          "cvss_score": 8.0,
+          "description": "Django vulnerable to information leakage in AuthenticationForm",
+          "id": "GHSA-rf4j-j272-fj86",
+          "recommendation": "Update django to a patched version as soon as possible.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-6188",
+            "https://github.com/django/django/commit/57b95fedad5e0b83fc9c81466b7d1751c6427aae",
+            "https://github.com/django/django/commit/c37bb28677295f6edda61d8ac461014ef0d3aeb2",
+            "https://github.com/advisories/GHSA-rf4j-j272-fj86",
+            "https://github.com/django/django",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2018-4.yaml",
+            "https://usn.ubuntu.com/3559-1",
+            "https://web.archive.org/web/20200517143909/http://www.securitytracker.com/id/1040422",
+            "https://www.djangoproject.com/weblog/2018/feb/01/security-releases",
+            "https://osv.dev/vulnerability/GHSA-rf4j-j272-fj86"
+          ],
+          "severity": "high",
+          "title": "GHSA-rf4j-j272-fj86"
+        },
+        {
+          "cve_id": "GHSA-rrqc-c2jx-6jgv",
+          "cvss_score": 5.5,
+          "description": "Django allows enumeration of user e-mail addresses",
+          "id": "GHSA-rrqc-c2jx-6jgv",
+          "recommendation": "Consider updating django to a newer version when convenient.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-45231",
+            "https://github.com/django/django/commit/3c733c78d6f8e50296d6e248968b6516c92a53ca",
+            "https://github.com/django/django/commit/96d84047715ea1715b4bd1594e46122b8a77b9e2",
+            "https://github.com/django/django/commit/bf4888d317ba4506d091eeac6e8b4f1fcc731199",
+            "https://docs.djangoproject.com/en/dev/releases/security",
+            "https://github.com/django/django",
+            "https://groups.google.com/forum/#%21forum/django-announce",
+            "https://www.djangoproject.com/weblog/2024/sep/03/security-releases",
+            "https://osv.dev/vulnerability/GHSA-rrqc-c2jx-6jgv"
+          ],
+          "severity": "medium",
+          "title": "GHSA-rrqc-c2jx-6jgv"
+        },
+        {
+          "cve_id": "GHSA-vfq6-hq5r-27r6",
+          "cvss_score": 9.5,
+          "description": "Django Potential account hijack via password reset form",
+          "id": "GHSA-vfq6-hq5r-27r6",
+          "recommendation": "Immediately update django to the latest secure version or consider alternative packages.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-19844",
+            "https://github.com/django/django/commit/302a4ff1e8b1c798aab97673909c7a3dfda42c26",
+            "https://github.com/django/django/commit/4d334bea06cac63dc1272abcec545b85136cca0e",
+            "https://github.com/django/django/commit/5b1fbcef7a8bec991ebe7b2a18b5d5a95d72cb70",
+            "https://github.com/django/django/commit/f4cff43bf921fcea6a29b726eb66767f67753fa2",
+            "https://www.djangoproject.com/weblog/2019/dec/18/security-releases",
+            "https://www.debian.org/security/2020/dsa-4598",
+            "https://usn.ubuntu.com/4224-1",
+            "https://security.netapp.com/advisory/ntap-20200110-0003",
+            "https://security.gentoo.org/glsa/202004-17",
+            "https://seclists.org/bugtraq/2020/Jan/9",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HCM2DPUI7TOZWN4A6JFQFUVQ2XGE7GUD",
+            "https://groups.google.com/forum/#!topic/django-announce/3oaB2rVH3a0",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2019-16.yaml",
+            "https://github.com/django/django",
+            "https://github.com/advisories/GHSA-vfq6-hq5r-27r6",
+            "https://docs.djangoproject.com/en/dev/releases/security",
+            "http://packetstormsecurity.com/files/155872/Django-Account-Hijack.html",
+            "https://osv.dev/vulnerability/GHSA-vfq6-hq5r-27r6"
+          ],
+          "severity": "critical",
+          "title": "GHSA-vfq6-hq5r-27r6"
+        },
+        {
+          "cve_id": "GHSA-wh4h-v3f2-r2pp",
+          "cvss_score": 8.0,
+          "description": "Uncontrolled Memory Consumption in Django",
+          "id": "GHSA-wh4h-v3f2-r2pp",
+          "recommendation": "Update django to a patched version as soon as possible.",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-6975",
+            "https://github.com/django/django/commit/0bbb560183fabf0533289700845dafa94951f227",
+            "https://github.com/django/django/commit/1f42f82566c9d2d73aff1c42790d6b1b243f7676",
+            "https://github.com/django/django/commit/40cd19055773705301c3428ed5e08a036d2091f3",
+            "https://www.openwall.com/lists/oss-security/2019/02/11/1",
+            "https://www.djangoproject.com/weblog/2019/feb/11/security-releases",
+            "https://www.debian.org/security/2019/dsa-4476",
+            "https://web.archive.org/web/20200227084713/http://www.securityfocus.com/bid/106964",
+            "https://usn.ubuntu.com/3890-1",
+            "https://seclists.org/bugtraq/2019/Jul/10",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVXDOVCXLD74SHR2BENGCE2OOYYYWJHZ",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/66WMXHGBXD7GSM3PEXVCMCAGLMQYHZCU",
+            "https://groups.google.com/forum/#!topic/django-announce/WTwEAprR0IQ",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2019-18.yaml",
+            "https://github.com/django/django",
+            "https://github.com/advisories/GHSA-wh4h-v3f2-r2pp",
+            "https://docs.djangoproject.com/en/dev/releases/security",
+            "https://osv.dev/vulnerability/GHSA-wh4h-v3f2-r2pp"
+          ],
+          "severity": "high",
+          "title": "GHSA-wh4h-v3f2-r2pp"
+        }
+      ],
+      "vulnerability_count": 13
+    },
+    "gidgethub": {
+      "package_name": "gidgethub",
+      "recommendation": "This package has a high ratio of open issues (25 issues, 395 stars). It may be poorly maintained.",
+      "risk_level": "low",
+      "risk_score": 30.0,
+      "version": "4.0.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 1
+    },
+    "httpx": {
+      "package_name": "httpx",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "rich": {
+      "package_name": "rich",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "sqlparse": {
+      "package_name": "sqlparse",
+      "recommendation": "This package has a high ratio of open issues (260 issues, 3902 stars). It may be poorly maintained.",
+      "risk_level": "low",
+      "risk_score": 30.0,
+      "version": "0.3.1",
+      "vulnerabilities": [],
+      "vulnerability_count": 1
+    },
+    "tzdata; sys_platform": {
+      "package_name": "tzdata; sys_platform",
+      "recommendation": "Cannot scan vulnerabilities - no vulnerability data available for this package.",
+      "risk_level": "na",
+      "risk_score": 0.0,
+      "version": "\"win32\"",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "uritemplate": {
+      "package_name": "uritemplate",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "3.0.1",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    }
+  }
+}

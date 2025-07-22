@@ -1,0 +1,679 @@
+{
+  "dependencies": [
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:15:15",
+        "closed_issues_count": 0,
+        "description": "A simple, yet elegant, HTTP library.",
+        "forks_count": 9501,
+        "full_name": "psf/requests",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 31,
+              "score": 3,
+              "status": "active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 9501,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 31,
+              "issue_ratio": 1.0,
+              "open_issues": 269,
+              "raw_score": 0.458,
+              "recency_score": 0.915,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 9501,
+              "raw_score": 28.91,
+              "score": 4,
+              "stars": 53049,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 14,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/psf/requests",
+        "language": "Python",
+        "open_issues_count": 269,
+        "platform": "github",
+        "pushed_at": "2025-06-16T19:10:38Z",
+        "stargazers_count": 53049
+      },
+      "name": "requests",
+      "type": "python",
+      "version": "*"
+    },
+    {
+      "github": {
+        "cached_at": "2025-07-17 21:15:15",
+        "closed_issues_count": 0,
+        "description": "The Python micro framework for building web applications.",
+        "forks_count": 16506,
+        "full_name": "pallets/flask",
+        "health": {
+          "max_score": 16,
+          "metrics": {
+            "activity": {
+              "days_since_update": 35,
+              "score": 3,
+              "status": "active",
+              "threshold": {
+                "abandoned": 730,
+                "moderate": 90,
+                "recent": 30,
+                "stale": 365
+              }
+            },
+            "community": {
+              "forks": 16506,
+              "score": 4,
+              "status": "strong_community",
+              "threshold": {
+                "forks_high": 100,
+                "forks_low": 5,
+                "forks_medium": 20
+              }
+            },
+            "maintenance": {
+              "closed_issues": 0,
+              "days_since_update": 35,
+              "issue_ratio": 1.0,
+              "open_issues": 14,
+              "raw_score": 0.452,
+              "recency_score": 0.904,
+              "score": 3,
+              "status": "decently_maintained",
+              "threshold": {
+                "issues_high": 100,
+                "issues_low": 10,
+                "issues_medium": 50
+              }
+            },
+            "popularity": {
+              "forks": 16506,
+              "raw_score": 30.11,
+              "score": 4,
+              "stars": 69975,
+              "status": "very_popular",
+              "threshold": {
+                "high": 1000,
+                "low": 10,
+                "medium": 100
+              }
+            }
+          },
+          "overall_score": 14,
+          "overall_status": "excellent",
+          "recommendation": "Highly recommended - well-maintained and popular"
+        },
+        "html_url": "https://github.com/pallets/flask",
+        "language": "Python",
+        "open_issues_count": 14,
+        "platform": "github",
+        "pushed_at": "2025-06-12T20:48:14Z",
+        "stargazers_count": 69975
+      },
+      "name": "flask",
+      "type": "python",
+      "version": "2.0.3"
+    }
+  ],
+  "dependency_tree": [
+    {
+      "dev": false,
+      "name": "requests",
+      "subdependencies": [
+        {
+          "name": "charset_normalizer",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "idna",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "urllib3",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "certifi",
+          "subdependencies": [],
+          "type": "python",
+          "version": "2017.4.17"
+        }
+      ],
+      "type": "python",
+      "version": "*"
+    },
+    {
+      "dev": false,
+      "name": "flask",
+      "subdependencies": [
+        {
+          "name": "blinker",
+          "subdependencies": [],
+          "type": "python",
+          "version": "1.9.0"
+        },
+        {
+          "name": "click",
+          "subdependencies": [],
+          "type": "python",
+          "version": "8.1.3"
+        },
+        {
+          "name": "importlib-metadata",
+          "subdependencies": [],
+          "type": "python",
+          "version": "flexible"
+        },
+        {
+          "name": "itsdangerous",
+          "subdependencies": [],
+          "type": "python",
+          "version": "2.2.0"
+        },
+        {
+          "name": "jinja2",
+          "subdependencies": [],
+          "type": "python",
+          "version": "3.1.2"
+        },
+        {
+          "name": "markupsafe",
+          "subdependencies": [],
+          "type": "python",
+          "version": "2.1.1"
+        },
+        {
+          "name": "werkzeug",
+          "subdependencies": [],
+          "type": "python",
+          "version": "3.1.0"
+        }
+      ],
+      "type": "python",
+      "version": "2.0.3"
+    }
+  ],
+  "filename": "requirements.txt",
+  "project_type": "python",
+  "sbom_data": {
+    "dependencies": [
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:15:15",
+          "closed_issues_count": 0,
+          "description": "A simple, yet elegant, HTTP library.",
+          "forks_count": 9501,
+          "full_name": "psf/requests",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 31,
+                "score": 3,
+                "status": "active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 9501,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 31,
+                "issue_ratio": 1.0,
+                "open_issues": 269,
+                "raw_score": 0.458,
+                "recency_score": 0.915,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 9501,
+                "raw_score": 28.91,
+                "score": 4,
+                "stars": 53049,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 14,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/psf/requests",
+          "language": "Python",
+          "open_issues_count": 269,
+          "platform": "github",
+          "pushed_at": "2025-06-16T19:10:38Z",
+          "stargazers_count": 53049
+        },
+        "name": "requests",
+        "type": "python",
+        "version": "*"
+      },
+      {
+        "github": {
+          "cached_at": "2025-07-17 21:15:15",
+          "closed_issues_count": 0,
+          "description": "The Python micro framework for building web applications.",
+          "forks_count": 16506,
+          "full_name": "pallets/flask",
+          "health": {
+            "max_score": 16,
+            "metrics": {
+              "activity": {
+                "days_since_update": 35,
+                "score": 3,
+                "status": "active",
+                "threshold": {
+                  "abandoned": 730,
+                  "moderate": 90,
+                  "recent": 30,
+                  "stale": 365
+                }
+              },
+              "community": {
+                "forks": 16506,
+                "score": 4,
+                "status": "strong_community",
+                "threshold": {
+                  "forks_high": 100,
+                  "forks_low": 5,
+                  "forks_medium": 20
+                }
+              },
+              "maintenance": {
+                "closed_issues": 0,
+                "days_since_update": 35,
+                "issue_ratio": 1.0,
+                "open_issues": 14,
+                "raw_score": 0.452,
+                "recency_score": 0.904,
+                "score": 3,
+                "status": "decently_maintained",
+                "threshold": {
+                  "issues_high": 100,
+                  "issues_low": 10,
+                  "issues_medium": 50
+                }
+              },
+              "popularity": {
+                "forks": 16506,
+                "raw_score": 30.11,
+                "score": 4,
+                "stars": 69975,
+                "status": "very_popular",
+                "threshold": {
+                  "high": 1000,
+                  "low": 10,
+                  "medium": 100
+                }
+              }
+            },
+            "overall_score": 14,
+            "overall_status": "excellent",
+            "recommendation": "Highly recommended - well-maintained and popular"
+          },
+          "html_url": "https://github.com/pallets/flask",
+          "language": "Python",
+          "open_issues_count": 14,
+          "platform": "github",
+          "pushed_at": "2025-06-12T20:48:14Z",
+          "stargazers_count": 69975
+        },
+        "name": "flask",
+        "type": "python",
+        "version": "2.0.3"
+      }
+    ],
+    "dependency_tree": [
+      {
+        "dev": false,
+        "name": "requests",
+        "subdependencies": [
+          {
+            "name": "charset_normalizer",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "idna",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "urllib3",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "certifi",
+            "subdependencies": [],
+            "type": "python",
+            "version": "2017.4.17"
+          }
+        ],
+        "type": "python",
+        "version": "*"
+      },
+      {
+        "dev": false,
+        "name": "flask",
+        "subdependencies": [
+          {
+            "name": "blinker",
+            "subdependencies": [],
+            "type": "python",
+            "version": "1.9.0"
+          },
+          {
+            "name": "click",
+            "subdependencies": [],
+            "type": "python",
+            "version": "8.1.3"
+          },
+          {
+            "name": "importlib-metadata",
+            "subdependencies": [],
+            "type": "python",
+            "version": "flexible"
+          },
+          {
+            "name": "itsdangerous",
+            "subdependencies": [],
+            "type": "python",
+            "version": "2.2.0"
+          },
+          {
+            "name": "jinja2",
+            "subdependencies": [],
+            "type": "python",
+            "version": "3.1.2"
+          },
+          {
+            "name": "markupsafe",
+            "subdependencies": [],
+            "type": "python",
+            "version": "2.1.1"
+          },
+          {
+            "name": "werkzeug",
+            "subdependencies": [],
+            "type": "python",
+            "version": "3.1.0"
+          }
+        ],
+        "type": "python",
+        "version": "2.0.3"
+      }
+    ]
+  },
+  "skipped_dependencies": [
+    "importlib-metadata",
+    "requests"
+  ],
+  "vulnerabilities": {
+    "blinker": {
+      "package_name": "blinker",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "1.9.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "click": {
+      "package_name": "click",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "8.1.3",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "flask": {
+      "package_name": "flask",
+      "recommendation": "LOW RISK: This package has minor vulnerabilities. Monitor for updates and apply them when available.",
+      "risk_level": "low",
+      "risk_score": 12.0,
+      "version": "2.0.3",
+      "vulnerabilities": [
+        {
+          "cve_id": "GHSA-m2qf-hxjv-5gpq",
+          "cvss_score": 8.0,
+          "description": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
+          "id": "GHSA-m2qf-hxjv-5gpq",
+          "recommendation": "Update flask to a patched version as soon as possible.",
+          "references": [
+            "https://github.com/pallets/flask/security/advisories/GHSA-m2qf-hxjv-5gpq",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-30861",
+            "https://github.com/pallets/flask/commit/70f906c51ce49c485f1d355703e9cc3386b1cc2b",
+            "https://github.com/pallets/flask/commit/afd63b16170b7c047f5758eb910c416511e9c965",
+            "https://github.com/pallets/flask",
+            "https://github.com/pallets/flask/releases/tag/2.2.5",
+            "https://github.com/pallets/flask/releases/tag/2.3.2",
+            "https://github.com/pypa/advisory-database/tree/main/vulns/flask/PYSEC-2023-62.yaml",
+            "https://lists.debian.org/debian-lts-announce/2023/08/msg00024.html",
+            "https://security.netapp.com/advisory/ntap-20230818-0006",
+            "https://www.debian.org/security/2023/dsa-5442",
+            "https://osv.dev/vulnerability/GHSA-m2qf-hxjv-5gpq"
+          ],
+          "severity": "high",
+          "title": "GHSA-m2qf-hxjv-5gpq"
+        }
+      ],
+      "vulnerability_count": 1
+    },
+    "importlib-metadata": {
+      "package_name": "importlib-metadata",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "itsdangerous": {
+      "package_name": "itsdangerous",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "2.2.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "jinja2": {
+      "package_name": "jinja2",
+      "recommendation": "MEDIUM RISK: This package has moderate vulnerabilities. Consider updating to a newer version when possible.",
+      "risk_level": "medium",
+      "risk_score": 34.3,
+      "version": "3.1.2",
+      "vulnerabilities": [
+        {
+          "cve_id": "GHSA-cpwx-vrp4-4pq7",
+          "cvss_score": 5.5,
+          "description": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+          "id": "GHSA-cpwx-vrp4-4pq7",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-cpwx-vrp4-4pq7",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-27516",
+            "https://github.com/pallets/jinja/commit/90457bbf33b8662926ae65cdde4c4c32e756e403",
+            "https://github.com/pallets/jinja",
+            "https://lists.debian.org/debian-lts-announce/2025/04/msg00045.html",
+            "https://osv.dev/vulnerability/GHSA-cpwx-vrp4-4pq7"
+          ],
+          "severity": "medium",
+          "title": "GHSA-cpwx-vrp4-4pq7"
+        },
+        {
+          "cve_id": "GHSA-gmj6-6f8f-6699",
+          "cvss_score": 5.5,
+          "description": "Jinja has a sandbox breakout through malicious filenames",
+          "id": "GHSA-gmj6-6f8f-6699",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-gmj6-6f8f-6699",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-56201",
+            "https://github.com/pallets/jinja/issues/1792",
+            "https://github.com/pallets/jinja/commit/767b23617628419ae3709ccfb02f9602ae9fe51f",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/releases/tag/3.1.5",
+            "https://osv.dev/vulnerability/GHSA-gmj6-6f8f-6699"
+          ],
+          "severity": "medium",
+          "title": "GHSA-gmj6-6f8f-6699"
+        },
+        {
+          "cve_id": "GHSA-h5c8-rqwp-cp95",
+          "cvss_score": 5.5,
+          "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+          "id": "GHSA-h5c8-rqwp-cp95",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-h5c8-rqwp-cp95",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-22195",
+            "https://github.com/pallets/jinja/commit/716795349a41d4983a9a4771f7d883c96ea17be7",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/releases/tag/3.1.3",
+            "https://lists.debian.org/debian-lts-announce/2024/01/msg00010.html",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3",
+            "https://osv.dev/vulnerability/GHSA-h5c8-rqwp-cp95"
+          ],
+          "severity": "medium",
+          "title": "GHSA-h5c8-rqwp-cp95"
+        },
+        {
+          "cve_id": "GHSA-h75v-3vvj-5mfj",
+          "cvss_score": 5.5,
+          "description": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+          "id": "GHSA-h75v-3vvj-5mfj",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-h75v-3vvj-5mfj",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-34064",
+            "https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb",
+            "https://github.com/pallets/jinja",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS",
+            "https://osv.dev/vulnerability/GHSA-h75v-3vvj-5mfj"
+          ],
+          "severity": "medium",
+          "title": "GHSA-h75v-3vvj-5mfj"
+        },
+        {
+          "cve_id": "GHSA-q2x7-8rv6-6q7h",
+          "cvss_score": 5.5,
+          "description": "Jinja has a sandbox breakout through indirect reference to format method",
+          "id": "GHSA-q2x7-8rv6-6q7h",
+          "recommendation": "Consider updating jinja2 to a newer version when convenient.",
+          "references": [
+            "https://github.com/pallets/jinja/security/advisories/GHSA-q2x7-8rv6-6q7h",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-56326",
+            "https://github.com/pallets/jinja/commit/48b0687e05a5466a91cd5812d604fa37ad0943b4",
+            "https://github.com/pallets/jinja",
+            "https://github.com/pallets/jinja/releases/tag/3.1.5",
+            "https://osv.dev/vulnerability/GHSA-q2x7-8rv6-6q7h"
+          ],
+          "severity": "medium",
+          "title": "GHSA-q2x7-8rv6-6q7h"
+        }
+      ],
+      "vulnerability_count": 5
+    },
+    "markupsafe": {
+      "package_name": "markupsafe",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "2.1.1",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "requests": {
+      "package_name": "requests",
+      "recommendation": "Cannot scan vulnerabilities without specific version number",
+      "risk_level": "na",
+      "risk_score": 0,
+      "version": "unknown",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    },
+    "werkzeug": {
+      "package_name": "werkzeug",
+      "recommendation": "This package appears to be secure with no known vulnerabilities.",
+      "risk_level": "safe",
+      "risk_score": 0.0,
+      "version": "3.1.0",
+      "vulnerabilities": [],
+      "vulnerability_count": 0
+    }
+  }
+}
