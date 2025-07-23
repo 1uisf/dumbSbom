@@ -8,10 +8,6 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
     <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
 <body>
@@ -925,13 +921,9 @@
         if (content.classList.contains('expanded')) {
           content.classList.remove('expanded');
           content.classList.add('collapsed');
-          icon.classList.remove('fa-chevron-down');
-          icon.classList.add('fa-chevron-right');
         } else {
           content.classList.remove('collapsed');
           content.classList.add('expanded');
-          icon.classList.remove('fa-chevron-right');
-          icon.classList.add('fa-chevron-down');
         }
       }
 

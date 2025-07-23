@@ -1558,7 +1558,7 @@ function exportToExcel() {
     // Show loading state
     const exportBtn = document.querySelector('.export-btn');
     const originalText = exportBtn.innerHTML;
-    exportBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating Excel...';
+    exportBtn.innerHTML = 'Generating Excel...';
     exportBtn.disabled = true;
     
     // Make request to server to generate Excel file
@@ -2299,7 +2299,7 @@ function exportToSpdx() {
     const originalTexts = Array.from(exportBtns).map(btn => btn.innerHTML);
     exportBtns.forEach(btn => {
         if (btn.innerText.includes('SPDX')) {
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating SPDX...';
+            btn.innerHTML = 'Generating SPDX...';
             btn.disabled = true;
         }
     });
